@@ -5,7 +5,7 @@ description: Evidence-first Orchard Core theming playbook for shapes, alternates
 
 # Orchard Core Theming Playbook
 
-Use this skill for Orchard Core theming and content-definition/recipe work without module development. Follow the task map and load only the minimal references needed.
+Use this skill for Orchard Core theming and content-definition/recipe work. Follow the task map and load only the minimal references needed.
 
 ## Quick start
 1) Read `references/INDEX.md` for navigation and conventions.
