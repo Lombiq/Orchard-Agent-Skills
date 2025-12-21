@@ -7,6 +7,7 @@ Optimized so an agent can load just the file it needs.
 - Start at `TASK-MAP.md`.
 - Open only the file for the task at hand.
 - Prefer examples and ready-to-copy patterns; keep edits minimal.
+- Task map links directly to leaf files to keep reference chains short.
 
 ## Conventions
 - ASCII only.
