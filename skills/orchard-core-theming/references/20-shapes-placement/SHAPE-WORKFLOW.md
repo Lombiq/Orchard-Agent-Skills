@@ -44,7 +44,7 @@ Use this to build/override a shape safely (e.g., `TextAndImage` section).
 - Other fields: see `40-content-model/FIELDS.md` for the property to use (e.g., NumericField.Value, BooleanField.Value, LinkField.Url/Text/Target, TaxonomyField.TermContentItemIds, ContentPickerField.ContentItemIds, etc.).
 - Use `<shape>` or `shape_render` to embed other shapes if needed.
 - Helper catalogs:
-  - Tag helpers: `30-razor/TAG-HELPERS.md`
+  - Tag helpers: `30-razor/TAG-HELPERS-SHAPES.md`
   - Liquid tags/filters: `31-liquid/LIQUID-TAGS.md`, `31-liquid/LIQUID-FILTERS.md`
   - Orchard helper extensions: `30-razor/ORCHARD-HELPER.md`
 - Editor-aware rendering:

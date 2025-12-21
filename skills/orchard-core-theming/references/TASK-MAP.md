@@ -45,7 +45,7 @@ Start here. Pick the task and open only the referenced files.
 - Read: `50-assets-resources/RESOURCES.md`
 - Read: `50-assets-resources/STATIC-FILES.md`
 - Read: `10-theme-basics/LAYOUTS-ZONES.md`
-- Read: `30-razor/TAG-HELPERS.md` (Razor examples)
+- Read: `30-razor/TAG-HELPERS-RESOURCES.md` (Razor examples)
 
 ## Find shape alternates and placement rules
 - Read: `20-shapes-placement/ALTERNATES.md`

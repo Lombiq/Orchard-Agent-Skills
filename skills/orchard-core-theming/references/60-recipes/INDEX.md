@@ -7,6 +7,8 @@ Related files:
 - Steps catalog: `RECIPE-STEPS.md`
 - Content import patterns: `RECIPE-CONTENT.md`
 - Command step examples: `RECIPE-COMMANDS.md`
+- Ready-to-copy examples: `RECIPE-EXAMPLES.md`
+- Feature IDs: `FEATURE-CATALOG.md` (full list in `FEATURE-CATALOG-ALL.md`)
 
 ## Where recipes live
 - `*/Recipes/*.recipe.json`: reusable recipes in modules/themes.
@@ -56,5 +58,5 @@ Related files:
 - Content import patterns: `RECIPE-CONTENT.md`
 - Command step: `RECIPE-COMMANDS.md`
 - Ready-to-copy examples: `RECIPE-EXAMPLES.md`
-- Feature IDs (enable/disable): `FEATURE-CATALOG.md`
+- Feature IDs (enable/disable): `FEATURE-CATALOG.md` (full list in `FEATURE-CATALOG-ALL.md`)
 - Base setup recipes to reuse: `BASE-RECIPES.md`
