@@ -10,4 +10,5 @@
 
 ## Source refs
 - Resource manager: `50-assets-resources/RESOURCES.md`
-- Tag helpers: `30-templating/TAG-HELPERS.md`
+- Tag helpers: `30-razor/TAG-HELPERS.md`
+

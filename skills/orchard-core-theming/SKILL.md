@@ -5,7 +5,7 @@ description: Evidence-first Orchard Core theming playbook for shapes, alternates
 
 # Orchard Core Theming Playbook
 
-Use this skill to theme Orchard Core. Follow the task map and load only the minimal references needed.
+Use this skill for Orchard Core theming and content-definition/recipe work without module development. Follow the task map and load only the minimal references needed.
 
 ## Quick start
 1) Read `references/INDEX.md` for navigation and conventions.
@@ -20,13 +20,18 @@ Use this skill to theme Orchard Core. Follow the task map and load only the mini
 - Do not invent recipe steps or feature IDs; use `references/60-recipes/RECIPE-STEPS.md` and `references/60-recipes/FEATURE-CATALOG.md`.
 
 ## Common workflows
+- Add or update content definitions: `references/40-content-model/CONTENT-DEFINITIONS.md`
 - Override a shape: `references/80-cookbook/OVERRIDE-SHAPE.md`
 - Render a content item: `references/80-cookbook/RENDER-CONTENT-ITEM.md`
+- Create a setup recipe: `references/60-recipes/INDEX.md`
 - Add scripts/styles: `references/80-cookbook/ADD-SECTION-RESOURCE.md`
 - Shape workflow checklist: `references/20-shapes-placement/SHAPE-WORKFLOW.md`
 
 ## Working in a repo
 - Confirm solution layout and active theme: `references/10-theme-basics/SOLUTION-STRUCTURE.md`, `references/10-theme-basics/THEME-STRUCTURE.md`
+- Determine template language by file extension:
+  - `.cshtml` -> `references/30-razor/INDEX.md`
+  - `.liquid` -> `references/31-liquid/INDEX.md`
 - Find `placement.json` and template overrides first; scope changes to the active theme.
 - Use source discovery patterns when you need evidence from Orchard Core source: `references/70-debugging-discovery/SOURCE-DISCOVERY.md`
 

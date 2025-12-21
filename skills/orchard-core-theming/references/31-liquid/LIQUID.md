@@ -17,6 +17,7 @@
 - Debug quickly with `| console_log` or `| json` in development.
 
 ## Related files
-- Tags: `30-templating/LIQUID-TAGS.md`
-- Filters: `30-templating/LIQUID-FILTERS.md`
-- Shape helpers: `30-templating/LIQUID-SHAPES.md`
+- Tags: `31-liquid/LIQUID-TAGS.md`
+- Filters: `31-liquid/LIQUID-FILTERS.md`
+- Shape helpers: `31-liquid/LIQUID-SHAPES.md`
+

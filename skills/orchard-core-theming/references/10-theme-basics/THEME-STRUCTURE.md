@@ -10,6 +10,7 @@
 - Admin UI views live in module `Views/` or the active admin theme.
 - If multiple themes exist, confirm which is active before adding views.
 - View files are either `.cshtml` or `.liquid`. Follow existing view type; if none, default to Liquid.
+- Razor guidance: `30-razor/INDEX.md`; Liquid guidance: `31-liquid/INDEX.md`.
 - Prefer shapes over MVC partials for UI composition.
 - To customize admin branding or inject admin-only CSS, override `Views/AdminBranding.cshtml` in an admin theme (BaseTheme `TheAdmin`).
   The default Orchard Core markup is:

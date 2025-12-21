@@ -44,9 +44,9 @@ Use this to build/override a shape safely (e.g., `TextAndImage` section).
 - Other fields: see `40-content-model/FIELDS.md` for the property to use (e.g., NumericField.Value, BooleanField.Value, LinkField.Url/Text/Target, TaxonomyField.TermContentItemIds, ContentPickerField.ContentItemIds, etc.).
 - Use `<shape>` or `shape_render` to embed other shapes if needed.
 - Helper catalogs:
-  - Tag helpers: `30-templating/TAG-HELPERS.md`
-  - Liquid tags/filters: `30-templating/LIQUID-TAGS.md`, `30-templating/LIQUID-FILTERS.md`
-  - Orchard helper extensions: `30-templating/ORCHARD-HELPER.md`
+  - Tag helpers: `30-razor/TAG-HELPERS.md`
+  - Liquid tags/filters: `31-liquid/LIQUID-TAGS.md`, `31-liquid/LIQUID-FILTERS.md`
+  - Orchard helper extensions: `30-razor/ORCHARD-HELPER.md`
 - Editor-aware rendering:
 - Check `40-content-model/FIELDS.md` for editor options that affect data shape (notably TextField editors like `IconPicker` -> Font Awesome class; `PredefinedList` -> selected option value). HtmlField renders `Html` regardless of editor flavor.
 
@@ -63,4 +63,5 @@ Use this to build/override a shape safely (e.g., `TextAndImage` section).
   - Razor: temporarily render a `<pre>` with `Model.Metadata.Type`, `Model.Metadata.Alternates`, or `System.Text.Json.JsonSerializer.Serialize(Model.ContentItem)`.
   - Remove these snippets after verifying to keep output clean.
 - Verify the target display types you care about (`Detail`, `Summary`, etc.).
+
 

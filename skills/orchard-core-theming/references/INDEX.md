@@ -16,7 +16,8 @@ Optimized so an agent can load just the file it needs.
 ## Sections
 - `10-theme-basics/` - theme structure, solution layout, manifests, zones, layouts
 - `20-shapes-placement/` - shape discovery, alternates, placement
-- `30-templating/` - Liquid, tag helpers, filters, shape tags (Liquid + Razor)
+- `30-razor/` - Razor tag helpers and IOrchardHelper extensions
+- `31-liquid/` - Liquid basics, tags, filters, shape helpers
 - `40-content-model/` - content items, parts, fields, containers (Bag/Flow/List)
 - `50-assets-resources/` - resources, scripts, styles, media
 - `60-recipes/` - recipe structure, steps, commands, content import
