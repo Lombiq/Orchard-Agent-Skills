@@ -240,7 +240,7 @@ Use these as the default "first examples" when building or reading recipes.
 ```
 - Use `ContentTypeSettings` for type-level flags (Creatable, Draftable, Listable, Stereotype).
 - Attach parts via `ContentTypePartDefinitionRecords`; add fields inside `ContentPartFieldDefinitionRecords`.
-- Part/field settings mirror `ContentDefinitions.json` (see `40-content-model/CONTENT-DEFINITIONS.md`).
+- Part/field settings mirror `ContentDefinition.json` (see `40-content-model/CONTENT-DEFINITIONS.md`).
 
 ### `ReplaceContentDefinition`
 - Replaces content definitions (delete then recreate).
@@ -413,3 +413,4 @@ Use these as the default "first examples" when building or reading recipes.
 
 ### Tenants
 - `FeatureProfiles` for tenant feature profile definitions.
+

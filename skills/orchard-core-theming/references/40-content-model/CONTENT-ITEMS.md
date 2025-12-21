@@ -27,5 +27,6 @@
 - When a task requires direct part/field access, avoid relying solely on `Model.Content` and inspect parts directly.
 
 ## Content definitions (optional)
-- If `ContentDefinitions.json` exists under `App_Data/Sites/<TenantName>/`, it describes content types, parts, and fields.
+- If `ContentDefinition.json` exists under `App_Data/Sites/<TenantName>/`, it describes content types, parts, and fields.
 - Use it to infer the shape of `ContentItem.Content` when overriding templates.
+

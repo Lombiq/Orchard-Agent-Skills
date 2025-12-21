@@ -1,11 +1,17 @@
-# Index
+# Orchard Core Theming References
 
-## What this is
-A focused, agent-readable map of Orchard Core theme knowledge.
+A compact, source-aligned knowledge base for Orchard Core theme work and recipes.
+Optimized so an agent can load just the file it needs.
 
-## Fast path
-- Start with `TASK-MAP.md`.
-- Use the exact file for the task; avoid browsing everything.
+## How to use
+- Start at `TASK-MAP.md`.
+- Open only the file for the task at hand.
+- Prefer examples and ready-to-copy patterns; keep edits minimal.
+
+## Conventions
+- ASCII only.
+- File references use inline paths like `20-shapes-placement/ALTERNATES.md`.
+- Keep sections short; add examples over prose.
 
 ## Sections
 - `10-theme-basics/` - theme structure, solution layout, manifests, zones, layouts
@@ -17,3 +23,7 @@ A focused, agent-readable map of Orchard Core theme knowledge.
 - `70-debugging-discovery/` - tracing, logs, diagnostics, source discovery
 - `80-cookbook/` - ready-to-use patterns with minimal steps
 - `90-glossary/` - terms, abbreviations, quick references
+
+## Maintenance
+- Derived from Orchard Core source and common solution patterns.
+- Update when source changes or new recurring tasks appear.

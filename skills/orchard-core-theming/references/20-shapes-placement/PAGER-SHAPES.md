@@ -81,10 +81,10 @@ Pager rendering in Orchard Core (Navigation module) and how to override/customiz
   @await DisplayAsync(Model)
   ```
 - Example glyph-based overrides (from a working theme):
-  - `Pager_First`: set `Model.Metadata.Type = "Pager_Link"`, `Model.Value` to `««` (Font Awesome icons), add `title`, set `RouteValues["action"]="Index"`; then `@await DisplayAsync(Model)`.
-  - `Pager_Last`: same pattern with `»»`.
-  - `Pager_Next`: set `Model.Value` to `»`, add `title`, `Model.Metadata.Type = "Pager_Link"`.
-  - `Pager_Previous`: set `Model.Value` to `«`, add `title`, set `Model.RouteValues["action"]="Index"` when `pageNum` is null; `Model.Metadata.Type = "Pager_Link"`.
+- `Pager_First`: set `Model.Metadata.Type = "Pager_Link"`, `Model.Value` to `&laquo;&laquo;` (Font Awesome icons), add `title`, set `RouteValues["action"]="Index"`; then `@await DisplayAsync(Model)`.
+- `Pager_Last`: same pattern with `&raquo;&raquo;`.
+- `Pager_Next`: set `Model.Value` to `&raquo;`, add `title`, `Model.Metadata.Type = "Pager_Link"`.
+- `Pager_Previous`: set `Model.Value` to `&laquo;`, add `title`, set `Model.RouteValues["action"]="Index"` when `pageNum` is null; `Model.Metadata.Type = "Pager_Link"`.
 
 Use `PagerId` alternates (`Pager__Blog`) to scope overrides to a specific pager instance if needed.
 

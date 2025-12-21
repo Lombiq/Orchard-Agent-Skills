@@ -29,7 +29,7 @@ Look for the primary `*.Web` project under `src/`. Typical contents:
   - `Media/`: media files.
   - `DataProtection-Keys/`: data protection keys.
   - database files (e.g., `OrchardCore.db`) when using file-based providers.
-  - optional `ContentDefinitions.json` when definitions are stored to file.
+  - optional `ContentDefinition.json` when definitions are stored to file.
 
 ## Auto-setup (multi-tenant)
 In `appsettings.Development.json` (or other environment files), check:
@@ -54,5 +54,6 @@ Recipes can be located in:
 Built outputs may contain `bin/.../Migrations/Recipes` folders; ignore these for source edits.
 
 ## Content definitions (optional file storage)
-If present, `ContentDefinitions.json` provides the content type/part/field definitions
+If present, `ContentDefinition.json` provides the content type/part/field definitions
 for a tenant and is useful for understanding ContentItem shape data.
+

@@ -1,6 +1,6 @@
 # Content Definitions
 
-`ContentDefinition.json` (or `ContentDefinitions.json`) is a tenant-scoped snapshot of content type, part, and field definitions.
+`ContentDefinition.json` is a tenant-scoped snapshot of content type, part, and field definitions.
 It lives under `App_Data/Sites/<TenantName>/` when file storage is enabled.
 
 ## Top-level structure
@@ -64,7 +64,7 @@ ContentItem.Content.<ContentType>.<FieldName>.<FieldProperty>
 
 ## Editing tips (JSON)
 - Types live under `ContentTypes`, parts under `ContentParts`. Attach parts via `ContentTypePartDefinitionRecords`.
-- Stereotypes matter for shape names (e.g., `"Stereotype": "Widget"` → `Widget-<Type>`; `"Stereotype": "MenuItem"` for menu items).
+- Stereotypes matter for shape names (e.g., `"Stereotype": "Widget"` -> `Widget-<Type>`; `"Stereotype": "MenuItem"` for menu items).
 - Set editors/display modes via field settings:
   - TextField example with IconPicker:
     ```json
@@ -233,3 +233,4 @@ ContentItem.Content.<ContentType>.<FieldName>.<FieldProperty>
   ]
 }
 ```
+

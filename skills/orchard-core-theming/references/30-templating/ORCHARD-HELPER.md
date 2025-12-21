@@ -14,7 +14,7 @@ Quick catalog of useful `IOrchardHelper` extension methods in Razor views.
 ## Display helpers (OrchardCore.ContentManagement.Display/Razor)
 - `DisplayAsync(ContentItem, displayType = "", groupId = "", IUpdateModel updater = null)` (on `IOrchardDisplayHelper`, which implements `IOrchardHelper`).
 - `ConsoleLog(object content)` (logs JSON to browser console; no-op in production/null content).
-- `LiquidToHtmlAsync(string liquid, object model = null)` — render a Liquid string to HTML from Razor (e.g., for HtmlField content).
+- `LiquidToHtmlAsync(string liquid, object model = null)` - render a Liquid string to HTML from Razor (e.g., for HtmlField content).
 
 ## Culture helpers (OrchardCore.DisplayManagement/Extensions)
 - `CultureDir()` -> `"rtl"` or `"ltr"`
@@ -43,8 +43,8 @@ Quick catalog of useful `IOrchardHelper` extension methods in Razor views.
   - `GetThemeOptions()` -> `TheAdminThemeOptions`
 
 ## Media/CDN and sanitization
-- `ResourceUrl(resourcePath, bool? appendVersion = null)` (OrchardCore.ResourceManagement.Core) — maps `~/` to app base, applies CDN and versioning.
-- `SanitizeHtml(string html)` (OrchardCore.Infrastructure) — returns sanitized HTML.
+- `ResourceUrl(resourcePath, bool? appendVersion = null)` (OrchardCore.ResourceManagement.Core) - maps `~/` to app base, applies CDN and versioning.
+- `SanitizeHtml(string html)` (OrchardCore.Infrastructure) - returns sanitized HTML.
 
 ## Tips
 - Add `@inject IOrchardHelper Orchard` (or use the built-in `Orchard` property in Razor views) to access these.

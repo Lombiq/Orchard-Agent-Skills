@@ -111,4 +111,4 @@ Settings appear under the `Settings` property in `ContentDefinition.json`.
 - `Liquid`
 
 ## Field-specific settings
-See `FIELDS.md` for each field type’s settings and editor settings.
+See `FIELDS.md` for each field type's settings and editor settings.

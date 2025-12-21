@@ -3,9 +3,9 @@
 Use this to build/override a shape safely (e.g., `TextAndImage` section).
 
 ## 1) Identify content type and tenant
-- If `ContentDefinitions.json` exists: find the tenant folder under `App_Data/Sites/<TenantName>/` that matches the active theme/site.
+- If `ContentDefinition.json` exists: find the tenant folder under `App_Data/Sites/<TenantName>/` that matches the active theme/site.
 - Locate the content type and note:
-  - `Stereotype` (Widget, Section, etc.) — drives base shape name.
+- `Stereotype` (Widget, Section, etc.) - drives base shape name.
   - Parts attached, and fields on those parts.
   - Field types and settings (see `40-content-model/FIELDS.md`).
 
@@ -48,7 +48,7 @@ Use this to build/override a shape safely (e.g., `TextAndImage` section).
   - Liquid tags/filters: `30-templating/LIQUID-TAGS.md`, `30-templating/LIQUID-FILTERS.md`
   - Orchard helper extensions: `30-templating/ORCHARD-HELPER.md`
 - Editor-aware rendering:
-  - Check `40-content-model/FIELDS.md` for editor options that affect data shape (notably TextField editors like `IconPicker` → Font Awesome class; `PredefinedList` → selected option value). HtmlField renders `Html` regardless of editor flavor.
+- Check `40-content-model/FIELDS.md` for editor options that affect data shape (notably TextField editors like `IconPicker` -> Font Awesome class; `PredefinedList` -> selected option value). HtmlField renders `Html` regardless of editor flavor.
 
 - When overriding a content item template and you just want a wrapper, prefer `@await DisplayAsync(Model.Content)` and let parts (including BagPart) render with their own templates.
 - Override `BagPart` only when you need custom item-level markup (e.g., FAQ accordion).
@@ -63,3 +63,4 @@ Use this to build/override a shape safely (e.g., `TextAndImage` section).
   - Razor: temporarily render a `<pre>` with `Model.Metadata.Type`, `Model.Metadata.Alternates`, or `System.Text.Json.JsonSerializer.Serialize(Model.ContentItem)`.
   - Remove these snippets after verifying to keep output clean.
 - Verify the target display types you care about (`Detail`, `Summary`, etc.).
+

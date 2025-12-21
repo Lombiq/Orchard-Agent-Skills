@@ -33,7 +33,7 @@ Map common tasks to the exact docs to read.
 - Read: `40-content-model/SETTINGS.md`
 
 ## Create or read recipes
-- Read: `60-recipes/README.md`
+- Read: `60-recipes/INDEX.md`
 - Read: `60-recipes/RECIPE-STEPS.md`
 - Read: `60-recipes/RECIPE-CONTENT.md`
 - Read: `60-recipes/RECIPE-COMMANDS.md`
@@ -43,9 +43,8 @@ Map common tasks to the exact docs to read.
 - Read: `10-theme-basics/THEME-MANIFEST.md`
 - Read: `30-templating/TAG-HELPERS.md`
 
-## Create a theme or module
+## Create a theme
 - Read: `10-theme-basics/CREATE-THEME.md`
-- Read: `10-theme-basics/CREATE-MODULE.md`
 
 ## Use tag helpers in Razor
 - Read: `30-templating/TAG-HELPERS.md`

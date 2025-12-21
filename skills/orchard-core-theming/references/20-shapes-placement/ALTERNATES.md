@@ -71,6 +71,6 @@ Field display mode variants require `_Display` on the shape type and a full diff
 - `UserDisplayName_DisplayType__UserName` (when available)
 
 ## Practical tips
-- Use `console_log` or the Razor `ConsoleLog` helper to inspect a shape’s alternates list.
+- Use `console_log` or the Razor `ConsoleLog` helper to inspect a shape's alternates list.
 - When changing shape type or display type in Liquid/Razor, clear alternates first.
 - Most-specific alternates win; keep templates targeted to avoid surprising overrides.
