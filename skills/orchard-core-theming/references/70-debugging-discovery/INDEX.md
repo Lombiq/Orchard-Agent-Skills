@@ -1,6 +1,6 @@
 # Debugging and Discovery
 
-Purpose: Shape tracing, logs, diagnostics, and source discovery.
-- Shape tracing: `SHAPE-TRACE.md`
-- Logs and tenant data: `LOGS.md`
-- Source discovery patterns: `SOURCE-DISCOVERY.md`
+Purpose: Use to trace shapes, inspect logs, and find evidence in source.
+- `SHAPE-TRACE.md` - tracing setup and output.
+- `LOGS.md` - logs and tenant paths.
+- `SOURCE-DISCOVERY.md` - source search patterns.

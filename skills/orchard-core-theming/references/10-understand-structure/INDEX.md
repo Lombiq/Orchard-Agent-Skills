@@ -1,9 +1,9 @@
 # Theme Basics
 
-Purpose: Understand Orchard Core solution and theme structure, manifests, zones, and layouts.
-- Solution layout: `SOLUTION-STRUCTURE.md` for core components, logs, database, and content definitions.
-- Theme structure and inheritance: `THEME-STRUCTURE.md` to determine Razor vs Liquid and which templates are active.
-- Layouts and zones: `LAYOUTS-ZONES.md`.
-- Create a theme: `CREATE-THEME.md`.
+Purpose: Use to identify the active/base theme, confirm manifests, and locate layouts/zones.
+- `SOLUTION-STRUCTURE.md` - locate solution layout and data.
+- `THEME-STRUCTURE.md` - inheritance, manifests, Razor vs Liquid.
+- `LAYOUTS-ZONES.md` - global and local zones.
+- `CREATE-THEME.md` - theme creation checklist.
 
 Keep this section small and link to specifics.

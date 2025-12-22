@@ -1,5 +1,5 @@
 # Assets and Resources
 
-Purpose: Scripts, styles, resource management, static files.
-- Resource manager: `RESOURCES.md`
-- Static file placement and paths: `STATIC-FILES.md`
+Purpose: Use to include scripts/styles and manage resources and static files.
+- `RESOURCES.md` - resource manager usage.
+- `STATIC-FILES.md` - static file placement.

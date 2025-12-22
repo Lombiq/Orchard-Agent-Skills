@@ -1,14 +1,26 @@
 # Recipes Overview
 
+Purpose: Use to author, validate, and reuse recipes for setup, definitions, and content import.
+
 Recipes are JSON documents used to initialize or migrate Orchard Core tenants.
 They can enable features, set themes, create definitions, import content, and more.
 
 Related files:
-- Steps catalog: `RECIPE-STEPS.md`
-- Content import patterns: `RECIPE-CONTENT.md`
-- Command step examples: `RECIPE-COMMANDS.md`
-- Ready-to-copy examples: `RECIPE-EXAMPLES.md`
-- Feature IDs: `FEATURE-CATALOG.md` (full list in `FEATURE-CATALOG-ALL.md`)
+- `RECIPE-STEPS.md` - step catalog.
+- `RECIPE-STEPS-CORE.md` - features, themes, settings.
+- `RECIPE-STEPS-DEFINITIONS.md` - types, parts, fields.
+- `RECIPE-STEPS-CONTENT-MEDIA.md` - content and media steps.
+- `RECIPE-STEPS-SEARCH.md` - search steps.
+- `RECIPE-STEPS-SECURITY.md` - security steps.
+- `RECIPE-STEPS-MISC.md` - misc steps.
+- `RECIPE-STEPS-TEMPLATES-WORKFLOWS.md` - templates and workflows.
+- `RECIPE-CONTENT.md` - content import patterns.
+- `RECIPE-COMMANDS.md` - command step examples.
+- `RECIPE-EXAMPLES.md` - ready-to-copy examples.
+- `RECIPE-EXAMPLES-SETUP.md` - setup recipe examples.
+- `RECIPE-EXAMPLES-CONTENT.md` - content recipe examples.
+- `FEATURE-CATALOG.md` - feature IDs (full list: `FEATURE-CATALOG-ALL.md`).
+- `BASE-RECIPES.md` - base setup recipes.
 
 ## Where recipes live
 - `*/Recipes/*.recipe.json`: reusable recipes in modules/themes.
@@ -52,11 +64,3 @@ Related files:
 - Use the `recipes` step to include other recipes by `name`.
 - Order matters; definitions and settings should usually come before content.
 - Setup recipes (`issetuprecipe: true`) are available during tenant setup and AutoSetup.
-
-## Related docs
-- Steps and schemas: `RECIPE-STEPS.md`
-- Content import patterns: `RECIPE-CONTENT.md`
-- Command step: `RECIPE-COMMANDS.md`
-- Ready-to-copy examples: `RECIPE-EXAMPLES.md`
-- Feature IDs (enable/disable): `FEATURE-CATALOG.md` (full list in `FEATURE-CATALOG-ALL.md`)
-- Base setup recipes to reuse: `BASE-RECIPES.md`

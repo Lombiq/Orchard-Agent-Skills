@@ -15,16 +15,16 @@ Optimized so an agent can load just the file it needs.
 - Keep sections short; add examples over prose.
 
 ## Sections
-- `10-understand-structure/` - theme structure, solution layout, manifests, zones, layouts
-- `20-shapes-placement/` - shape discovery, alternates, placement
-- `30-razor/` - Razor tag helpers and IOrchardHelper extensions
-- `31-liquid/` - Liquid basics, tags, filters, shape helpers
-- `40-content-model/` - content items, parts, fields, containers (Bag/Flow/List)
-- `50-assets-resources/` - resources, scripts, styles, media
-- `60-recipes/` - recipe structure, steps, commands, content import
-- `70-debugging-discovery/` - tracing, logs, diagnostics, source discovery
-- `80-cookbook/` - ready-to-use patterns with minimal steps
-- `90-glossary/` - terms, abbreviations, quick references
+- `10-understand-structure/` - Use to identify the active/base theme, confirm manifests, and locate layouts/zones.
+- `20-shapes-placement/` - Use to find shape names, alternates, placement rules, and override workflow steps.
+- `30-razor/` - Use to implement Razor theme changes with tag helpers, shape rendering, and IOrchardHelper.
+- `31-liquid/` - Use to implement Liquid theme changes with tags, filters, and shape helpers.
+- `40-content-model/` - Use to inspect content definitions and access parts/fields while rendering.
+- `50-assets-resources/` - Use to include scripts/styles and manage resources and static files.
+- `60-recipes/` - Use to author, validate, and reuse recipes for setup, definitions, and content import.
+- `70-debugging-discovery/` - Use to trace shapes, inspect logs, and find evidence in source.
+- `80-cookbook/` - Use for quick, minimal-step how-tos and example patterns.
+- `90-glossary/` - Use to resolve terms and acronyms in Orchard Core theming docs.
 
 ## Maintenance
 - Derived from Orchard Core source and common solution patterns.
