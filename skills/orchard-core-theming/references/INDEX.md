@@ -15,7 +15,7 @@ Optimized so an agent can load just the file it needs.
 - Keep sections short; add examples over prose.
 
 ## Sections
-- `10-theme-basics/` - theme structure, solution layout, manifests, zones, layouts
+- `10-understand-structure/` - theme structure, solution layout, manifests, zones, layouts
 - `20-shapes-placement/` - shape discovery, alternates, placement
 - `30-razor/` - Razor tag helpers and IOrchardHelper extensions
 - `31-liquid/` - Liquid basics, tags, filters, shape helpers

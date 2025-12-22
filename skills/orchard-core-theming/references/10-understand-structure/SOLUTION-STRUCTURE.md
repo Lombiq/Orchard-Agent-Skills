@@ -17,21 +17,21 @@ Keep it generic and use it as a checklist for discovery in any repo.
 Look for the primary `*.Web` project under `src/`. Typical contents:
 - `appsettings*.json`: environment settings and Orchard configuration.
 - `Program.cs`: application startup.
-- `wwwroot/`: static assets.
-- `App_Data/`: tenant data, logs, and runtime state.
+- `wwwroot/`: static assets, but typically not used, because assets comes from the themes and modules.
+- `App_Data/`: tenant data, logs, and runtime state, see below.
 - `NLog.config` (or other logging config).
 
-## App_Data
-- `App_Data/logs/`: logs (useful for debugging startup issues and module/theme behavior).
+## App_Data for understanding the state of the app and tenants after setup
+- `App_Data/logs/`: logs, useful for debugging runtime errors, help the user with providing errors found here when needed.
 - `App_Data/tenants.json`: tenant registry; keys are tenant names with values like `TenantId`, `VersionId`, `RequestUrlPrefix`, `State`.
 - `App_Data/Sites/<TenantName>/`: tenant-specific storage.
   - `appsettings.json`: per-tenant settings.
-  - `Media/`: media files.
+  - `Media/`: media files for local development environments.
   - `DataProtection-Keys/`: data protection keys.
-  - database files (e.g., `OrchardCore.db`) when using file-based providers.
-  - optional `ContentDefinition.json` when definitions are stored to file.
+  - SQLite database files (e.g., `OrchardCore.db`) when using file-based providers.
+  - optional `ContentDefinition.json` when definitions are stored to file, use this to understand the active content types on the tenant before doing work with content items
 
-## Auto-setup (multi-tenant)
+## Auto-setup when user wants to skip the setup screen
 In `appsettings.Development.json` (or other environment files), check:
 ```
 OrchardCore:OrchardCore_AutoSetup:Tenants[]
@@ -46,10 +46,10 @@ Each tenant typically includes:
 - optional `RequestUrlHost`, `RequestUrlPrefix`, `FeatureProfile`
 
 ## Recipes
-Recipes can be located in:
+Recipes convey data, configuration, content items, content types either during setup or when needed. Recipes can be located in:
 - `HostProject/Recipes/` (common but not required).
-- `ModuleOrTheme/Migrations/Recipes/`
 - `ModuleOrTheme/Recipes/` (custom or sample recipes)
+- `ModuleOrTheme/Migrations/Recipes/`
 - Test projects may also include recipes for automation.
 Built outputs may contain `bin/.../Migrations/Recipes` folders; ignore these for source edits.
 

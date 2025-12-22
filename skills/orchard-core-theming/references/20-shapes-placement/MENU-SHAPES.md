@@ -3,7 +3,7 @@
 How Orchard Core renders menus and how to override or hand-render them.
 
 ## Feature dependency
-- Enable `OrchardCore.Menu` and `OrchardCore.Navigation` for menu shapes and tag helpers.
+- Enable `OrchardCore.Menu` for menu content types and shapes.
 
 ## Shapes involved
 - `Menu`: root shape for a menu.

@@ -4,54 +4,46 @@ Shape alternates are the template name candidates that Orchard Core tries in ord
 They let you target a specific content type, display type, part, field, or zone without changing drivers.
 
 ## Naming rules (high level)
-- `__` separates alternate segments; filenames replace `__` with `-`.
+- `__` separates alternate segments; filenames use `-` in place of `__` (both work, but `-` is standard).
 - Display types are inserted with `_DisplayType` between the base shape and the alternate segments.
 - Display modes append `_Display` to the shape type for parts/fields that support display modes.
 - Part and field "differentiators" use `-` inside the alternate segment (e.g., `Blog-MyField`).
 
 ## Content item alternates
-- `Content__ContentType`
-- `Content_DisplayType__ContentType`
-- `Content__Alias__Alias`
-- `Content_DisplayType__Alias__Alias`
-- `Content__Slug__Slug`
-- `Content_DisplayType__Slug__Slug`
+- `Content__[ContentType]` - content item shape for a specific content type.
+- `Content_[DisplayType]__[ContentType]` - display-type-specific override (e.g., Summary).
+- `Content__Alias__[Alias]`
+- `Content_[DisplayType]__Alias__[Alias]`
+- `Content__Slug__[Slug]`
+- `Content_[DisplayType]__Slug__[Slug]`
 
 Filename mapping examples:
-- `Content__Article` -> `Content-Article.cshtml`
-- `Content_Summary__Article` -> `Content-Article.Summary.cshtml`
+- `Content__Article` -> `Content-Article.cshtml` (or same with .liquid)
+- `Content_Summary__Article` -> `Content-Article.Summary.cshtml` (or same with .liquid)
 
-## Stereotype alternates (general pattern)
-- Use the stereotype value as the base shape name.
-- Example: `Section` -> `Section__ContentType` -> `Section-ContentType.cshtml`.
-- Example: `Block` -> `Block__ContentType` -> `Block-ContentType.cshtml`.
+## Stereotype alternates for content items
+- A content type might have a stereotype set. If you are unsure, check the `ContentDefinition.json` or fall back to `Content`. Use the stereotype value as the base shape name instead of `Content`.
+- Example: `Section` -> `Section__[ContentType]` -> `Section-Hero.cshtml`.
+- Example: `Block` -> `Block__[ContentType]` -> `Block-TextAndImage.cshtml`.
+- Example: `Widget` -> `Widget__[ContentType]` -> `Widget-Image.cshtml`.
+- Same alternates apply; replace `Content` with the stereotype.
 
-## Widget alternates (stereotype)
-- `Widget__ContentType`
-- `Widget_DisplayType__ContentType`
-- `Widget__Alias__Alias`
-- `Widget_DisplayType__Alias__Alias`
-- `Widget__Slug__Slug`
-- `Widget_DisplayType__Slug__Slug`
-
-## Section alternates (stereotype example)
-- `Section__ContentType`
-- `Section_DisplayType__ContentType`
-
-## Part alternates (common patterns)
+## Part alternates if granular overrides are required
 - `[ShapeType]` (often the part type name)
 - `[ShapeType]_[DisplayType]`
 - `[ContentType]_[DisplayType]__[PartType]`
 - `[ContentType]_[DisplayType]__[PartName]`
 - `[ContentType]_[DisplayType]__[PartType]__[ShapeType]`
 - `[ContentType]_[DisplayType]__[PartName]__[ShapeType]`
+- If a custom part only has fields, a field override may be enough.
 
 Display mode variants (for parts with display modes):
 - `[ShapeType]_[DisplayType]__[DisplayMode]_Display`
 - `[ContentType]_[DisplayType]__[PartType]__[DisplayMode]_Display`
 - `[ContentType]_[DisplayType]__[PartName]__[DisplayMode]_Display`
 
-## Field alternates (common patterns)
+## Field alternates if granular overrides are required
+- `[ShapeType]` (often the field type name)
 - `[ShapeType]_[DisplayType]` (field type with display type)
 - `[PartType]__[FieldName]`
 - `[ContentType]__[PartName]__[FieldName]`
@@ -63,7 +55,7 @@ Display mode variants (for parts with display modes):
 
 Field display mode variants require `_Display` on the shape type and a full differentiator.
 
-## Zone alternates
+## Zone alternates (wrap or override a zone)
 - `Zone__ZoneName` (e.g., `Zone__Footer` -> `Zone-Footer.cshtml`)
 
 ## User alternates

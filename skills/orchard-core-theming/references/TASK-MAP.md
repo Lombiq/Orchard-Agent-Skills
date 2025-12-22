@@ -3,8 +3,8 @@
 Start here. Pick the task and open only the referenced files.
 
 ## Determine template language (Razor vs Liquid)
-- Read: `10-theme-basics/THEME-STRUCTURE.md`
-- Read: `10-theme-basics/SOLUTION-STRUCTURE.md`
+- Read: `10-understand-structure/SOLUTION-STRUCTURE.md`
+- Read: `10-understand-structure/THEME-STRUCTURE.md`
 - If the theme uses `.cshtml`, use `30-razor/INDEX.md`.
 - If the theme uses `.liquid`, use `31-liquid/INDEX.md`.
 
@@ -50,7 +50,7 @@ Start here. Pick the task and open only the referenced files.
 ## Add scripts/styles and include them in the layout
 - Read: `50-assets-resources/RESOURCES.md`
 - Read: `50-assets-resources/STATIC-FILES.md`
-- Read: `10-theme-basics/LAYOUTS-ZONES.md`
+- Read: `10-understand-structure/LAYOUTS-ZONES.md`
 - Read: `30-razor/TAG-HELPERS-RESOURCES.md` (Razor examples)
 
 ## Find shape alternates and placement rules
@@ -62,8 +62,8 @@ Start here. Pick the task and open only the referenced files.
 - Read: `70-debugging-discovery/SOURCE-DISCOVERY.md`
 
 ## Theme structure or layout
-- Read: `10-theme-basics/THEME-STRUCTURE.md`
-- Read: `10-theme-basics/LAYOUTS-ZONES.md`
+- Read: `10-understand-structure/THEME-STRUCTURE.md`
+- Read: `10-understand-structure/LAYOUTS-ZONES.md`
 
 ## Understand solution structure
-- Read: `10-theme-basics/SOLUTION-STRUCTURE.md`
+- Read: `10-understand-structure/SOLUTION-STRUCTURE.md`
