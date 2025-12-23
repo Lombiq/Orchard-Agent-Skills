@@ -2,6 +2,7 @@
 
 This file documents the settings objects used inside content definitions.
 Settings appear under the `Settings` property in `ContentDefinition.json`.
+Prefer using `CONTENT-DEFINITIONS-EXTRACTOR.md` to pull the exact settings slice you need.
 
 ## Shared settings
 

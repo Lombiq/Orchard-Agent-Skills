@@ -28,5 +28,5 @@
 
 ## Content definitions (optional)
 - If `ContentDefinition.json` exists under `App_Data/Sites/<TenantName>/`, it describes content types, parts, and fields.
-- Use it to infer the shape of `ContentItem.Content` when overriding templates.
+- Prefer the extractor (`CONTENT-DEFINITIONS-EXTRACTOR.md`) to infer the shape of `ContentItem.Content` when overriding templates.
 

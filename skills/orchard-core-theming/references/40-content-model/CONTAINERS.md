@@ -31,6 +31,8 @@ How Orchard Core stores and renders contained items.
   - Access `Model.Widgets` (already shapes in display mode) or rebuild like BagPart.
   - Use `FlowMetadata.Size` to apply grid classes if the base theme uses them.
   - To change layout rules globally, override the `FlowPart` shape.
+ - Typical usage: FlowPart is meant for Widget stereotypes. It is usually rendered as part of
+   `@await DisplayAsync(Model.Content)`; manual rendering is rare compared to BagPart.
 
 ## ListPart and ContainedPart
 - ListPart stores no items; items live as regular content items with `ContainedPart`.

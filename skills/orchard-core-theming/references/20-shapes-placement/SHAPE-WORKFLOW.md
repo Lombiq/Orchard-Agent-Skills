@@ -3,7 +3,7 @@
 Use this to build/override a shape safely (e.g., `TextAndImage` section).
 
 ## 1) Identify content type and tenant
-- If `ContentDefinition.json` exists: find the tenant folder under `App_Data/Sites/<TenantName>/` that matches the active theme/site.
+- If `ContentDefinition.json` exists: use `40-content-model/CONTENT-DEFINITIONS-EXTRACTOR.md` to extract the type/part slice (avoid reading the full JSON).
 - Locate the content type and note:
 - `Stereotype` (Widget, Section, etc.) - drives base shape name.
   - Parts attached, and fields on those parts.
@@ -15,7 +15,7 @@ Use this to build/override a shape safely (e.g., `TextAndImage` section).
   - Default content -> `Content-<ContentType>`
 - Add display type if needed: `Content-<Type>.Summary.cshtml` (or `.liquid`).
 - Alternates patterns: see `20-shapes-placement/ALTERNATES.md`.
-- If unsure, check `ContentDefinition.json` for `ContentTypeSettings.Stereotype` before creating the template.
+- If unsure, use the extractor to check `ContentTypeSettings.Stereotype` before creating the template.
 
 ## 3) Map fields to properties
 - Use the field type to know the value property (see `40-content-model/FIELDS.md`):

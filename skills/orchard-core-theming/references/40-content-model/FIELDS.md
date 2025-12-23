@@ -189,6 +189,6 @@ ContentItem.Content.MyPart.Categories.TermContentItemIds
 ```
 - Getting taxonomy/terms:
   - Razor: `var taxonomy = await Orchard.GetContentItemByIdAsync(field.TaxonomyContentItemId);`
-  - The taxonomy tree is embedded under `taxonomy.Content.TaxonomyPart.Terms` as term content items (not separately stored in the DB).
-  - Selected term IDs are in `TermContentItemIds` (string[]). Match them against the embedded terms tree (e.g., recursive filter where `ContentItemId` is in `TermContentItemIds`).
-  - Liquid: assign the taxonomy content item from the ID (`{% assign tax = Content.ContentItemId[field.TaxonomyContentItemId] %}`), then iterate `tax.Content.TaxonomyPart.Terms` and filter by `TermContentItemIds` to get selected terms.
+  - Terms are a flat list under `taxonomy.Content.TaxonomyPart.Terms`; levels live on `TermPart` if needed.
+  - Selected term IDs are in `TermContentItemIds` (string[]). Filter the flat terms list by `ContentItemId`.
+  - Liquid: assign the taxonomy content item from the ID (`{% assign tax = Content.ContentItemId[field.TaxonomyContentItemId] %}`), then iterate `tax.Content.TaxonomyPart.Terms` and filter by `TermContentItemIds`.

@@ -9,11 +9,15 @@ Start here. Pick the task and open only the referenced files.
 - If the theme uses `.liquid`, use `31-liquid/INDEX.md`.
 
 ## Add or update a content type/part/field in ContentDefinition.json
+- Prefer the extractor: `40-content-model/CONTENT-DEFINITIONS-EXTRACTOR.md` (pull the existing slice before editing).
 - Read: `40-content-model/CONTENT-DEFINITIONS.md`
 - Read: `40-content-model/CONTENT-DEFINITIONS-EXAMPLES.md` (sample patterns)
 - Read: `40-content-model/FIELDS.md`
 - Read: `40-content-model/SETTINGS.md`
 - Read: `40-content-model/PARTS.md`
+
+## Extract a focused content definition slice (large JSON)
+- Read: `40-content-model/CONTENT-DEFINITIONS-EXTRACTOR.md`
 
 ## Create a setup recipe
 - Read: `60-recipes/RECIPE-STEPS-CORE.md` (features/themes/settings/recipes)

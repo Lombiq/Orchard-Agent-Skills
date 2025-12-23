@@ -2,6 +2,7 @@
 
 `ContentDefinition.json` is a tenant-scoped snapshot of content type, part, and field definitions.
 It lives under `App_Data/Sites/<TenantName>/` when file storage is enabled.
+Prefer `CONTENT-DEFINITIONS-EXTRACTOR.md` to pull focused slices; read the raw JSON only as a last resort.
 
 ## Top-level structure
 - `ContentTypeDefinitionRecords`: all content types and the parts attached to them.

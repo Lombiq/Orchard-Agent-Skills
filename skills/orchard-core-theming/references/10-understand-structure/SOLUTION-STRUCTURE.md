@@ -29,7 +29,7 @@ Look for the primary `*.Web` project under `src/`. Typical contents:
   - `Media/`: media files for local development environments.
   - `DataProtection-Keys/`: data protection keys.
   - SQLite database files (e.g., `OrchardCore.db`) when using file-based providers.
-  - optional `ContentDefinition.json` when definitions are stored to file, use this to understand the active content types on the tenant before doing work with content items
+  - optional `ContentDefinition.json` when definitions are stored to file; prefer the extractor (`40-content-model/CONTENT-DEFINITIONS-EXTRACTOR.md`) to inspect types/parts
 
 ## Auto-setup when user wants to skip the setup screen
 In `appsettings.Development.json` (or other environment files), check:
@@ -55,5 +55,4 @@ Built outputs may contain `bin/.../Migrations/Recipes` folders; ignore these for
 
 ## Content definitions (optional file storage)
 If present, `ContentDefinition.json` provides the content type/part/field definitions
-for a tenant and is useful for understanding ContentItem shape data.
-
+for a tenant and is useful for understanding ContentItem shape data. Use the extractor first.
