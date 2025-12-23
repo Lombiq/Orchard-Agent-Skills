@@ -2,6 +2,7 @@
 
 Purpose: Use to inspect content definitions and access parts/fields while rendering.
 - `CONTENT-ITEMS.md` - content item basics.
+- `CONTENT-ITEMS-EXTRACTOR.md` - extract real content items from SQLite.
 - `CONTENT-DEFINITIONS.md` - definition structure.
 - `CONTENT-DEFINITIONS-EXAMPLES.md` - sample definition patterns.
 - `CONTENT-DEFINITIONS-EXTRACTOR.md` - extract focused slices from large definition files.

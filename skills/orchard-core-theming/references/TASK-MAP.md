@@ -41,6 +41,9 @@ Start here. Pick the task and open only the referenced files.
 - Read: `40-content-model/CONTAINERS.md`
 - Then choose Razor or Liquid: `30-razor/INDEX.md` or `31-liquid/INDEX.md`.
 
+## Inspect real content items (SQLite)
+- Read: `40-content-model/CONTENT-ITEMS-EXTRACTOR.md`
+
 ## Update a shape after adding fields
 - Read: `40-content-model/FIELDS.md`
 - Read: `20-shapes-placement/SHAPE-WORKFLOW.md`

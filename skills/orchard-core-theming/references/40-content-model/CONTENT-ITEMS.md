@@ -31,3 +31,7 @@
 - Prefer the extractor (`CONTENT-DEFINITIONS-EXTRACTOR.md`) to infer the shape of `ContentItem.Content` when overriding templates,
   including when definitions live in SQLite.
 
+## Sample content items from SQLite
+When actual values are needed (e.g., to confirm field data or build recipe samples), use
+`CONTENT-ITEMS-EXTRACTOR.md` to pull items from `OrchardCore.db`.
+
