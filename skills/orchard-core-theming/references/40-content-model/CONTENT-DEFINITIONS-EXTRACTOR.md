@@ -9,7 +9,7 @@ Script: `scripts/extract-content-definitions.py`
 Extract a type and its related container types (Markdown, stdout):
 ```bash
 python scripts/extract-content-definitions.py \
-  --source <ContentDefinition.json> \
+  --source <ContentDefinition.json|tenant-folder|OrchardCore.db> \
   --type Page \
   --include-related \
   --format md
@@ -18,7 +18,7 @@ python scripts/extract-content-definitions.py \
 Extract a type as JSON (machine-friendly, stdout):
 ```bash
 python scripts/extract-content-definitions.py \
-  --source <ContentDefinition.json> \
+  --source <ContentDefinition.json|tenant-folder|OrchardCore.db> \
   --type Page \
   --format json
 ```
@@ -26,8 +26,16 @@ python scripts/extract-content-definitions.py \
 Extract a reusable part definition (optional; type output already embeds attached part definitions):
 ```bash
 python scripts/extract-content-definitions.py \
-  --source <ContentDefinition.json> \
+  --source <ContentDefinition.json|tenant-folder|OrchardCore.db> \
   --part BlogPost \
+  --format md
+```
+
+Extract from SQLite explicitly (Document table):
+```bash
+python scripts/extract-content-definitions.py \
+  --sqlite-db <OrchardCore.db> \
+  --type Page \
   --format md
 ```
 
@@ -40,7 +48,9 @@ python scripts/extract-content-definitions.py \
 Use `--related-depth 2` if related types themselves contain nested containers.
 
 ## Notes
-- The script reads `ContentDefinition.json` directly. For SQLite-backed tenants, export or extract the JSON first.
+- The script reads `ContentDefinition.json` directly when present. For SQLite-backed tenants without it,
+  the script reads from `Document`
+  where `Type` is `OrchardCore.ContentManagement.Metadata.Records.ContentDefinitionRecord, OrchardCore.ContentManagement.Abstractions`.
 - Use `--all` only when you truly need the full set; it can be large.
 - Omit `--out` to write to stdout (preferred to avoid creating files tracked by git).
 - First extract the type without `--include-related` to see attached parts. If it only has FlowPart

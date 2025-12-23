@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 import argparse
 import json
+import os
+import sqlite3
 import sys
 from collections import deque
 
@@ -16,6 +18,11 @@ STEREOTYPE_REFERENCE_KEYS = {
     "DisplayedStereotypes",
     "Stereotypes",
 }
+
+CONTENT_DEFINITION_DOC_TYPE = (
+    "OrchardCore.ContentManagement.Metadata.Records.ContentDefinitionRecord, "
+    "OrchardCore.ContentManagement.Abstractions"
+)
 
 
 def _split_values(values):
@@ -67,6 +74,55 @@ def _sorted_refs(refs):
 def _load_json(path):
     with open(path, "r", encoding="utf-8") as handle:
         return json.load(handle)
+
+
+def _load_from_sqlite(db_path):
+    if not os.path.isfile(db_path):
+        raise FileNotFoundError(f"SQLite database not found: {db_path}")
+
+    with sqlite3.connect(db_path) as connection:
+        connection.row_factory = sqlite3.Row
+        cursor = connection.execute(
+            "SELECT Content FROM Document WHERE Type = ? ORDER BY Id DESC LIMIT 1",
+            (CONTENT_DEFINITION_DOC_TYPE,),
+        )
+        row = cursor.fetchone()
+        if not row:
+            raise ValueError(
+                "ContentDefinition record not found in Document table for Type "
+                f"'{CONTENT_DEFINITION_DOC_TYPE}'."
+            )
+        return json.loads(row["Content"])
+
+
+def _resolve_source(source_path, sqlite_db_path):
+    if source_path:
+        if os.path.isdir(source_path):
+            json_path = os.path.join(source_path, "ContentDefinition.json")
+            if os.path.isfile(json_path):
+                return _load_json(json_path), f"{json_path}"
+            db_path = os.path.join(source_path, "OrchardCore.db")
+            if os.path.isfile(db_path):
+                return _load_from_sqlite(db_path), f"{db_path} (sqlite)"
+        else:
+            if os.path.isfile(source_path):
+                if source_path.lower().endswith(".db"):
+                    return _load_from_sqlite(source_path), f"{source_path} (sqlite)"
+                return _load_json(source_path), f"{source_path}"
+
+            parent = os.path.dirname(source_path)
+            db_path = os.path.join(parent, "OrchardCore.db")
+            if os.path.basename(source_path).lower() == "contentdefinition.json":
+                if os.path.isfile(db_path):
+                    return _load_from_sqlite(db_path), f"{db_path} (sqlite)"
+
+    if sqlite_db_path:
+        return _load_from_sqlite(sqlite_db_path), f"{sqlite_db_path} (sqlite)"
+
+    raise FileNotFoundError(
+        "Could not locate ContentDefinition.json or OrchardCore.db. "
+        "Provide --source (file or tenant folder) or --sqlite-db."
+    )
 
 
 def _build_part_definition_view(part_record):
@@ -280,10 +336,18 @@ def _indent_block(text, spaces):
 def main():
     parser = argparse.ArgumentParser(
         description=(
-            "Extract content definitions and related content types from ContentDefinition.json."
+            "Extract content definitions and related content types from ContentDefinition.json "
+            "or OrchardCore.db."
         )
     )
-    parser.add_argument("--source", required=True, help="Path to ContentDefinition.json")
+    parser.add_argument(
+        "--source",
+        help="Path to ContentDefinition.json, OrchardCore.db, or tenant folder.",
+    )
+    parser.add_argument(
+        "--sqlite-db",
+        help="Path to OrchardCore.db (Document table fallback).",
+    )
     parser.add_argument(
         "--type",
         dest="types",
@@ -323,13 +387,15 @@ def main():
     parser.add_argument("--out", help="Output path (default: stdout).")
 
     args = parser.parse_args()
+    if not args.source and not args.sqlite_db:
+        parser.error("Specify --source or --sqlite-db.")
     selected_types = _split_values(args.types)
     selected_parts = _split_values(args.parts)
 
     if not args.all and not selected_types and not selected_parts:
         parser.error("Specify --type, --part, or --all.")
 
-    data = _load_json(args.source)
+    data, source_label = _resolve_source(args.source, args.sqlite_db)
     type_records = data.get("ContentTypeDefinitionRecords", [])
     part_records = data.get("ContentPartDefinitionRecords", [])
     types_by_name = {record.get("Name"): record for record in type_records}
@@ -343,7 +409,7 @@ def main():
         if stereotype:
             types_by_stereotype.setdefault(stereotype, set()).add(record.get("Name"))
 
-    output = {"source": args.source}
+    output = {"source": source_label}
 
     types_output = []
     if args.all:
