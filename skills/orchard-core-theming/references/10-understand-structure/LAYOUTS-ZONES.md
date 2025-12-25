@@ -7,7 +7,7 @@ How the layout template exposes zones/sections that placement can target.
 - Common zones: `HeadMeta`, `Header`, `Messages`, `Content`, `Footer`, plus any theme-specific ones.
 - Razor: render sections with `@await RenderSectionAsync("<Zone>", required: false)`; render the main body with `@await RenderBodyAsync()`.
 - Placement `place` values (e.g., `Content:1`, `/Footer`) must match zones rendered in the layout. See `20-shapes-placement/PLACEMENT.md` for details.
-- The `<zone>` Razor tag helper or `{% zone %}` Liquid tag can also place ad-hoc shapes into zones. See `30-razor/TAG-HELPERS-SHAPES.md` or `31-liquid/LIQUID-TAGS.md` if needed.
+- The `<zone>` Razor tag helper or `{% zone %}` Liquid tag can also place ad-hoc shapes into zones. See `30-razor/TAG-HELPERS-SHAPES.md` or `40-liquid/LIQUID-TAGS.md` if needed.
 
 ## Where to confirm in source
 - Check the active theme's layout file first (child themes can override base theme layouts).

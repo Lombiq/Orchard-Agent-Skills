@@ -10,7 +10,7 @@ Steps that add, replace, or delete content type/part/field definitions.
 ```
 - Use `ContentTypeSettings` for type-level flags (Creatable, Draftable, Listable, Stereotype).
 - Attach parts via `ContentTypePartDefinitionRecords`; add fields inside `ContentPartFieldDefinitionRecords`.
-- Part/field settings mirror `ContentDefinition.json` (see `40-content-model/CONTENT-DEFINITIONS.md`); use the extractor for existing definitions.
+- Part/field settings mirror `ContentDefinition.json` (see `50-content-model/CONTENT-DEFINITIONS.md`); use the extractor for existing definitions.
 
 ## `ReplaceContentDefinition`
 - Replaces content definitions (delete then recreate).

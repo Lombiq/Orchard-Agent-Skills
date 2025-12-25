@@ -46,8 +46,8 @@ Notes:
 ```
 <PartName>.<FieldName>.<FieldProperty>
 ```
-- Field properties are in `40-content-model/FIELDS.md` (e.g., `TextField.Text`, `NumericField.Value`).
-- Part properties are in `40-content-model/PARTS.md`.
+- Field properties are in `50-content-model/FIELDS.md` (e.g., `TextField.Text`, `NumericField.Value`).
+- Part properties are in `50-content-model/PARTS.md`.
 
 ## Referencing other content items
 Use variables and IDs when content items reference each other:
@@ -77,7 +77,7 @@ Use variables and IDs when content items reference each other:
 - `ContentDefinition` defines the shape of types and parts.
 - `content` imports actual items and uses that definition.
 - Ensure definitions exist before importing items.
-- Cross-reference: `40-content-model/CONTENT-DEFINITIONS.md`.
+- Cross-reference: `50-content-model/CONTENT-DEFINITIONS.md`.
 
 ## FlowPart and BagPart examples
 - FlowPart embeds widgets under `FlowPart.Widgets[]` with `FlowMetadata`:

@@ -7,7 +7,7 @@ Understanding the theme structure helps you locate templates and confirm inherit
 - Admin UI views live in module `Views/` or the active admin theme.
 - If multiple themes exist, confirm which you need to work with, unless specifically asked by the user.
 - View files are either `.cshtml` or `.liquid`. Determine this for the active theme and use the matching guidance. If none are present, check the base theme or ask the user.
-- Razor guidance: `30-razor/INDEX.md`; Liquid guidance: `31-liquid/INDEX.md`.
+- Razor guidance: `30-razor/INDEX.md`; Liquid guidance: `40-liquid/INDEX.md`.
 - Prefer shapes over MVC partials for UI composition.
 - `Views/Layout.cshtml` is treated as the site layout automatically; do not set `Layout = null` inside it.
 

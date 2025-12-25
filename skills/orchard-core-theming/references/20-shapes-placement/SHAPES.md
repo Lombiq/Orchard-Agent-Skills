@@ -10,7 +10,7 @@
 
 ## Determining the shape model
 - If the view model is unclear, find where the shape is created or invoked to see which properties are passed.
-- If that fails, treat it as a Content Item shape (see `40-content-model/CONTENT-ITEMS.md`) or ask for the expected model.
+- If that fails, treat it as a Content Item shape (see `50-content-model/CONTENT-ITEMS.md`) or ask for the expected model.
 
 ## Shape lifecycle (high level)
 - Creation -> metadata/alternates -> placement -> rendering.
@@ -18,4 +18,4 @@
 ## Finding shape data
 - Inspect the driver/tag helper/Liquid invocation that created the shape to see what properties are set.
 - If unsure, log `Model.Metadata.Alternates` and `Model` (Liquid `| console_log`, Razor serialize in dev) to learn the model.
-- Content item shapes usually expose `ContentItem`, `ContentItem.Content`, and the part/field being rendered; see `40-content-model/CONTENT-ITEMS.md`.
+- Content item shapes usually expose `ContentItem`, `ContentItem.Content`, and the part/field being rendered; see `50-content-model/CONTENT-ITEMS.md`.

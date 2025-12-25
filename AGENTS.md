@@ -15,6 +15,6 @@ This repository contains Codex Agent Skills under `skills/`. Follow these rules 
 - Keep guidance concise and example-driven.
 
 ## Orchard Core theming skill notes
-- Keep Razor and Liquid references separate (`references/30-razor/` and `references/31-liquid/`).
+- Keep Razor and Liquid references separate (`references/30-razor/` and `references/40-liquid/`).
 - Update `references/TASK-MAP.md` when adding new workflows.
 - Preserve existing content unless the change is deliberate and documented.

@@ -24,7 +24,7 @@ Use this skill for Orchard Core theming and content-definition/recipe work. Foll
 
 ## Working in a repo
 - Confirm solution layout, active theme, base theme, and template language using `references/TASK-MAP.md`.
-- Determine Razor vs Liquid, then use the matching references (`references/30-razor/` or `references/31-liquid/`).
+- Determine Razor vs Liquid, then use the matching references (`references/30-razor/` or `references/40-liquid/`).
 - Find `placement.json` and existing template overrides first; scope changes to the active theme.
 - If multiple themes exist, ask which one to use unless the user specified it.
 - Use source discovery patterns when you need evidence from Orchard Core source (see `references/TASK-MAP.md`).

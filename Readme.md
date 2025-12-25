@@ -36,7 +36,7 @@ The skills are agent-agnostic, but each agent has its own discovery locations. H
   $CWD/../.codex/skills
   $REPO_ROOT/.codex/skills
   ```
-- To make the skills available across all repositories on your machine, place them into `CODEX_HOME/skills`. On macOS and Linux this defaults to `~/.codex/skills`.
+- To make the skills available across all repositories on your machine, place them into `$CODEX_HOME/skills`. On macOS and Linux this defaults to `~/.codex/skills`.
 - Docs: https://developers.openai.com/codex/skills
 
 ### Anthropic Claude Code

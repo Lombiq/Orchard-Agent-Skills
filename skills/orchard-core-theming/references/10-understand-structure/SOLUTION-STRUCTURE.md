@@ -29,7 +29,7 @@ Look for the primary `*.Web` project under `src/`. Typical contents:
   - `Media/`: media files for local development environments.
   - `DataProtection-Keys/`: data protection keys.
   - SQLite database files (e.g., `OrchardCore.db`) when using file-based providers.
-  - optional `ContentDefinition.json` when definitions are stored to file; prefer the extractor (`40-content-model/CONTENT-DEFINITIONS-EXTRACTOR.md`) to inspect types/parts
+  - optional `ContentDefinition.json` when definitions are stored to file; prefer the extractor (`50-content-model/CONTENT-DEFINITIONS-EXTRACTOR.md`) to inspect types/parts
     and fall back to `OrchardCore.db` if the file is missing.
 
 ## Auto-setup when user wants to skip the setup screen

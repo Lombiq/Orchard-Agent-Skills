@@ -27,5 +27,5 @@
 - `{% shape_add_wrappers shape, "Wrapper1" %}`
 - `{% shape_type shape, "MyType" %}`
 
-See `31-liquid/LIQUID-TAGS.md` for the full tag list and `20-shapes-placement/ALTERNATES.md` for naming patterns.
+See `40-liquid/LIQUID-TAGS.md` for the full tag list and `20-shapes-placement/ALTERNATES.md` for naming patterns.
 

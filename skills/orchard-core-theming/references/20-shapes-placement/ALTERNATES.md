@@ -22,7 +22,7 @@ Filename mapping examples:
 - `Content_Summary__Article` -> `Content-Article.Summary.cshtml` (or same with .liquid)
 
 ## Stereotype alternates for content items
-- A content type might have a stereotype set. If you are unsure, use the extractor (`40-content-model/CONTENT-DEFINITIONS-EXTRACTOR.md`) or fall back to `Content`. Use the stereotype value as the base shape name instead of `Content`.
+- A content type might have a stereotype set. If you are unsure, use the extractor (`50-content-model/CONTENT-DEFINITIONS-EXTRACTOR.md`) or fall back to `Content`. Use the stereotype value as the base shape name instead of `Content`.
 - Example: `Section` -> `Section__[ContentType]` -> `Section-Hero.cshtml`.
 - Example: `Block` -> `Block__[ContentType]` -> `Block-TextAndImage.cshtml`.
 - Example: `Widget` -> `Widget__[ContentType]` -> `Widget-Image.cshtml`.

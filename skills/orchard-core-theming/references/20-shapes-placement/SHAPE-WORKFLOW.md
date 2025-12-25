@@ -3,11 +3,11 @@
 Use this to build/override a shape safely (e.g., `TextAndImage` section).
 
 ## 1) Identify content type and tenant
-- If `ContentDefinition.json` exists: use `40-content-model/CONTENT-DEFINITIONS-EXTRACTOR.md` to extract the type/part slice (avoid reading the full JSON).
+- If `ContentDefinition.json` exists: use `50-content-model/CONTENT-DEFINITIONS-EXTRACTOR.md` to extract the type/part slice (avoid reading the full JSON).
 - Locate the content type and note:
 - `Stereotype` (Widget, Section, etc.) - drives base shape name.
   - Parts attached, and fields on those parts.
-  - Field types and settings (see `40-content-model/FIELDS.md`).
+  - Field types and settings (see `50-content-model/FIELDS.md`).
 
 ## 2) Determine template name
 - Base on stereotype:
@@ -18,7 +18,7 @@ Use this to build/override a shape safely (e.g., `TextAndImage` section).
 - If unsure, use the extractor to check `ContentTypeSettings.Stereotype` before creating the template.
 
 ## 3) Map fields to properties
-- Use the field type to know the value property (see `40-content-model/FIELDS.md`):
+- Use the field type to know the value property (see `50-content-model/FIELDS.md`):
   - `TextField.Text`
   - `MediaField.Paths[]` and `MediaTexts[]`
   - etc.
@@ -26,7 +26,7 @@ Use this to build/override a shape safely (e.g., `TextAndImage` section).
 - For fields on the type itself, the part name equals the type name.
 
 ## 4) Render helpers (Razor/Liquid)
-- These are examples; for other field types use `40-content-model/FIELDS.md` and the tag/helper catalogs.
+- These are examples; for other field types use `50-content-model/FIELDS.md` and the tag/helper catalogs.
 - Media (Razor, MediaField first path):
   ```cshtml
   @{
@@ -41,14 +41,14 @@ Use this to build/override a shape safely (e.g., `TextAndImage` section).
   ```
 - Text field (Razor): `@Model.ContentItem.Content.PartName.Text.Text`
 - Text field (Liquid): `{{ Model.ContentItem.Content.PartName.Text.Text }}`
-- Other fields: see `40-content-model/FIELDS.md` for the property to use (e.g., NumericField.Value, BooleanField.Value, LinkField.Url/Text/Target, TaxonomyField.TermContentItemIds, ContentPickerField.ContentItemIds, etc.).
+- Other fields: see `50-content-model/FIELDS.md` for the property to use (e.g., NumericField.Value, BooleanField.Value, LinkField.Url/Text/Target, TaxonomyField.TermContentItemIds, ContentPickerField.ContentItemIds, etc.).
 - Use `<shape>` or `shape_render` to embed other shapes if needed.
 - Helper catalogs:
   - Tag helpers: `30-razor/TAG-HELPERS-SHAPES.md`
-  - Liquid tags/filters: `31-liquid/LIQUID-TAGS.md`, `31-liquid/LIQUID-FILTERS.md`
+  - Liquid tags/filters: `40-liquid/LIQUID-TAGS.md`, `40-liquid/LIQUID-FILTERS.md`
   - Orchard helper extensions: `30-razor/ORCHARD-HELPER.md`
 - Editor-aware rendering:
-- Check `40-content-model/FIELDS.md` for editor options that affect data shape (notably TextField editors like `IconPicker` -> Font Awesome class; `PredefinedList` -> selected option value). HtmlField renders `Html` regardless of editor flavor.
+- Check `50-content-model/FIELDS.md` for editor options that affect data shape (notably TextField editors like `IconPicker` -> Font Awesome class; `PredefinedList` -> selected option value). HtmlField renders `Html` regardless of editor flavor.
 
 - When overriding a content item template and you just want a wrapper, prefer `@await DisplayAsync(Model.Content)` and let parts (including BagPart) render with their own templates.
 - Override `BagPart` only when you need custom item-level markup (e.g., FAQ accordion).

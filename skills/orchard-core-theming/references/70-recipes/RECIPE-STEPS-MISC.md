@@ -38,7 +38,7 @@ Other steps that do not fit the main categories.
   }
 }
 ```
-- Cross-reference: `40-content-model/CONTENT-ITEMS.md`.
+- Cross-reference: `50-content-model/CONTENT-ITEMS.md`.
 
 ## Tenants
 - `FeatureProfiles` for tenant feature profile definitions.
