@@ -106,7 +106,7 @@ Note: these steps are not yet final or battle-tested. When you run the first upd
 
 12. Keep navigation and maps accurate.
     - If you add or move reference files, update `skills/orchard-core-theming/references/TASK-MAP.md`.
-    - Update `skills/orchard-core-theming/references/INDEX.md` to reflect any new files or sections.
+    - Update `skills/orchard-core-theming/SKILL.md` if the task list or reference section cues need changes.
 
 13. Final consistency pass.
     - Verify that all file references resolve and stay one level deep from `SKILL.md`.

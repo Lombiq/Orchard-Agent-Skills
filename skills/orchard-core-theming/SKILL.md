@@ -1,33 +1,56 @@
 ---
 name: orchard-core-theming
-description: Evidence-first Orchard Core theming playbook for shapes, alternates, placement, Razor/Liquid templates, content model access, assets/resources, and recipes used in theme work. Use for theme adjustments, shape overrides, template discovery, content item/field access, placement.json rules, and recipe authoring related to theming.
+description: Evidence-first Orchard Core theming skill for shapes, alternates, placement, Razor/Liquid templates, content model access, assets/resources, and recipes. Use for theme adjustments, shape overrides, template discovery, content item/field access, placement.json rules, and recipe authoring in Orchard Core projects.
 ---
 
-# Orchard Core Theming Playbook
+# Orchard Core Theming
 
-Use this skill for Orchard Core theming and content-definition/recipe work. Follow the task map and load only the references needed for the task.
+Use this skill for Orchard Core theming and content-definition/recipe work.
 
-## Quick start
-1) Read `references/INDEX.md` for navigation and conventions.
-2) Use `references/TASK-MAP.md` to jump to the exact task file.
-3) Load only those reference files; follow cross-references only if they match the task.
+## How to use
+- Path A (task match): scan the Tasks list; if the request matches, open `references/TASK-MAP.md` and go directly to the leaf files.
+- Path B (exploration): use the section cues to pick a reference section, open that section's `INDEX.md`, then choose the leaf file it points to.
+- Determine Razor vs Liquid early using the workflow in `references/TASK-MAP.md`. If it cannot be decided, fall back to Liquid and confirm with the user.
+- Open only the necessary leaf files; use a section `INDEX.md` only for orientation and discovery.
+- Prefer examples and ready-to-copy patterns.
 
-## Anti-hallucination rules
+## Evidence rules
 - Prefer repo evidence over assumptions: active theme, base theme, `placement.json`, and existing templates.
-- If the shape model is unclear, trace it first. Use `references/TASK-MAP.md` to find shape tracing guidance; ask the user if needed.
-- If part/field properties are unknown, confirm in `ContentDefinition.json` and the field reference (see `references/TASK-MAP.md`).
+- Trace the shape model first when it is unclear; use `references/TASK-MAP.md` to find shape tracing guidance and ask the user if needed.
+- Confirm unknown part/field properties in `ContentDefinition.json` (or `OrchardCore.db`) and the relevant field references.
 - Ask for missing identifiers (content type, part name, field name, display type) instead of inventing them.
 - Do not invent recipe steps or feature IDs; use `references/TASK-MAP.md` to find the right recipe references.
 
-## Common workflows
-- Use `references/TASK-MAP.md` for content definitions, setup recipes, shape overrides, and asset inclusion.
+## Scripts
+Use these scripts instead of hand-building extracts.
+- `scripts/extract-content-definitions.py` to extract content types/parts/fields from `ContentDefinition.json` or `OrchardCore.db`, with optional related-type expansion and Markdown/JSON output. See `references/50-content-model/CONTENT-DEFINITIONS-EXTRACTOR.md`.
+- `scripts/extract-content-items.py` to get content items from `OrchardCore.db`, filter by type/IDs/text, and optionally emit a recipe `content` step or a Markdown/JSON extract. See `references/50-content-model/CONTENT-ITEMS-EXTRACTOR.md`.
 
-## Working in a repo
-- Confirm solution layout, active theme, base theme, and template language using `references/TASK-MAP.md`.
-- Determine Razor vs Liquid, then use the matching references (`references/30-razor/` or `references/40-liquid/`).
-- Find `placement.json` and existing template overrides first; scope changes to the active theme.
-- If multiple themes exist, ask which one to use unless the user specified it.
-- Use source discovery patterns when you need evidence from Orchard Core source (see `references/TASK-MAP.md`).
+## Reference section cues
+Use these cues to decide which reference section to open.
+- Use `references/10-understand-structure/` to identify the active/base theme, confirm manifests, and locate layouts/zones.
+- Use `references/20-shapes-placement/` to find shape names, alternates, placement rules, and override workflow steps.
+- Use `references/30-razor/` to implement Razor theme changes with tag helpers, shape rendering, and IOrchardHelper.
+- Use `references/40-liquid/` to implement Liquid theme changes with tags, filters, and shape helpers.
+- Use `references/50-content-model/` to inspect content definitions and access parts/fields while rendering.
+- Use `references/60-assets-resources/` to include scripts/styles and manage resources and static files.
+- Use `references/70-recipes/` to author, validate, and reuse recipes for setup, definitions, and content import.
+- Use `references/80-debugging-discovery/` to trace shapes, inspect logs, and find evidence in source.
+- Use `references/90-glossary/` to resolve terms and acronyms in Orchard Core theming docs.
 
-## Reference map
-Use `references/INDEX.md` and `references/TASK-MAP.md` to locate the exact reference file for a task.
+## Tasks
+Use this list to decide whether to open `references/TASK-MAP.md` for the exact leaf files.
+- Determine template language (Razor vs Liquid).
+- Add or update a content type/part/field in ContentDefinition.json.
+- Extract a focused content definition slice (large JSON).
+- Create a setup recipe.
+- Add content types and sample content to a recipe.
+- Create or override a content item shape template.
+- Inspect real content items (SQLite).
+- Update a shape after adding fields.
+- Render BagPart/FlowPart/ListPart items.
+- Add scripts/styles and include them in the layout.
+- Find shape alternates and placement rules.
+- Find evidence in Orchard Core source.
+- Work on theme structure or layout.
+- Understand solution structure.

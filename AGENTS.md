@@ -7,7 +7,7 @@ This repository contains agent-agnostic skills under `skills/`. Follow these rul
 - `SKILL.md` must include YAML frontmatter with only `name` and `description`.
 - Use `references/` for supporting docs, and prefer task-focused leaf files.
 - References to files should be relative to the skill root.
-- Avoid long reference chains; make `references/TASK-MAP.md` point directly to leaf files and/or create `INDEX.md` files to serve as maps with short descriptions.
+- Avoid long reference chains; make `references/TASK-MAP.md` point directly to leaf files.
 
 ## Content conventions
 - Default to ASCII in skill files.
