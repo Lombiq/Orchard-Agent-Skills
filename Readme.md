@@ -46,6 +46,10 @@ The skills are agent-agnostic, but each agent has its own discovery locations. H
 - Some Claude plugins include and manage their own skills automatically.
 - Docs: https://code.claude.com/docs/en/skills
 
+## Maintenance
+
+See the [orchard-core-theming maintenance guide](maintenance/orchard-core-theming.md) for the step-by-step update workflow.
+
 ## Contributing
 
 Bug reports, feature requests, comments, questions, code contributions and love letters are warmly welcome. You can send them to us via GitHub issues and pull requests. Please adhere to our [open-source guidelines](https://lombiq.com/open-source-guidelines) while doing so.
