@@ -22,6 +22,9 @@ Fast ways to learn which shape is rendering and which alternates are available.
 @System.Text.Json.JsonSerializer.Serialize(Model)
 ```
 
+## Content item JSON
+- If a content item object is available, the ContentItem.Content can be treated as a JSON object, render it in Liquid or Razor when needed.
+
 ## Placement and selection hints
 - Placement uses shape type + differentiator; confirm differentiator value by logging `Model.Metadata.Differentiator`.
 - Enable detailed logs for `OrchardCore.DisplayManagement` in development to see template binding choices.

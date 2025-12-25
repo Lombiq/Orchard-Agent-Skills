@@ -24,22 +24,28 @@ Use this to build/override a shape safely (e.g., `TextAndImage` section).
   - etc.
 - Access pattern in Razor: `Model.ContentItem.Content.<Part>.<Field>.<Property>`.
 - For fields on the type itself, the part name equals the type name.
+- Content JSON values are dynamic; in Razor, avoid explicit casts like `(string)` on field values. Inline the expression or call `.ToString()`/`Convert.ToString()` when you need a string.
+- Avoid `Model?.ContentItem?.Content` null chains in shape templates; use null checks only at the field/property level when data can be missing (e.g., `MediaField.Paths`).
 
 ## 4) Render helpers (Razor/Liquid)
 - These are examples; for other field types use `50-content-model/FIELDS.md` and the tag/helper catalogs.
+- In Razor, keep simple fields inline and only assign locals when reusing values or handling field-level nulls; in Liquid, `assign` is fine for readability.
 - Media (Razor, MediaField first path):
   ```cshtml
   @{
-      var imgPath = (string)(Model.ContentItem.Content.PartName.Image.Paths?[0]);
+      var imgPath = Model.ContentItem.Content.PartName.Image.Paths?[0]?.ToString();
   }
-  <img asset-src="@imgPath" asp-append-version="true" alt="">
+  @if (!string.IsNullOrEmpty(imgPath))
+  {
+      <img asset-src="@imgPath" asp-append-version="true" alt="">
+  }
   ```
 - Media (Liquid):
   ```liquid
   {% assign img = Model.ContentItem.Content.PartName.Image.Paths[0] %}
   <img src="{{ img | asset_url | resize_url: width: 1200 }}" alt="">
   ```
-- Text field (Razor): `@Model.ContentItem.Content.PartName.Text.Text`
+- Text field (Razor): `@Model.ContentItem.Content.PartName.Text.Text` (no explicit cast needed)
 - Text field (Liquid): `{{ Model.ContentItem.Content.PartName.Text.Text }}`
 - Other fields: see `50-content-model/FIELDS.md` for the property to use (e.g., NumericField.Value, BooleanField.Value, LinkField.Url/Text/Target, TaxonomyField.TermContentItemIds, ContentPickerField.ContentItemIds, etc.).
 - Use `<shape>` or `shape_render` to embed other shapes if needed.

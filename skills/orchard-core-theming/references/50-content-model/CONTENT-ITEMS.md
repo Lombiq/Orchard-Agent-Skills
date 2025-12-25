@@ -18,6 +18,8 @@
 - Parts are stored under `ContentItem.Content.<PartName>`.
 - Fields are stored under `ContentItem.Content.<PartName>.<FieldName>`.
 - Field values live in a field-specific property (see `FIELDS.md`).
+- In Razor, avoid explicit casts like `(string)` on dynamic field values; inline the expression or call `.ToString()`/`Convert.ToString()` when you need a string.
+- Avoid `Model?.ContentItem?.Content` null chains in shape templates; use null checks only at the field/property level when data can be missing (e.g., `MediaField.Paths`).
 
 ## Template conventions
 - Content item templates (e.g., `Content-Article.cshtml` or `Widget-MyType.liquid`) typically expose:
