@@ -28,11 +28,11 @@ Use these scripts instead of hand-building extracts.
 
 ## Reference section cues
 Use these cues to decide which reference section to open.
-- Use `references/10-understand-structure/` to identify the active/base theme, confirm manifests, and locate layouts/zones.
+- Use `references/10-understand-structure/` to confirm solution and theme structure (manifests, base theme), create themes, and locate layouts/zones.
 - Use `references/20-shapes-placement/` to find shape names, alternates, placement rules, and override workflow steps.
 - Use `references/30-razor/` to implement Razor theme changes with tag helpers, shape rendering, and IOrchardHelper.
 - Use `references/40-liquid/` to implement Liquid theme changes with tags, filters, and shape helpers.
-- Use `references/50-content-model/` to inspect content definitions and access parts/fields while rendering.
+- Use `references/50-content-model/` to inspect content definitions/items, parts/fields, settings/containers, and the extractors.
 - Use `references/60-assets-resources/` to include scripts/styles and manage resources and static files.
 - Use `references/70-recipes/` to author, validate, and reuse recipes for setup, definitions, and content import.
 - Use `references/80-debugging-discovery/` to trace shapes, inspect logs, and find evidence in source.

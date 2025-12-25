@@ -1,26 +1,24 @@
-# Recipes Overview
+# Recipes
 
-Purpose: Use to author, validate, and reuse recipes for setup, definitions, and content import.
+Purpose: Author, validate, and reuse recipes for setup, definitions, and content import.
 
-Recipes are JSON documents used to initialize or migrate Orchard Core tenants.
-They can enable features, set themes, create definitions, import content, and more.
-
-Related files:
-- `RECIPE-STEPS.md` - step catalog.
-- `RECIPE-STEPS-CORE.md` - features, themes, settings.
-- `RECIPE-STEPS-DEFINITIONS.md` - types, parts, fields.
-- `RECIPE-STEPS-CONTENT-MEDIA.md` - content and media steps.
-- `RECIPE-STEPS-SEARCH.md` - search steps.
-- `RECIPE-STEPS-SECURITY.md` - security steps.
-- `RECIPE-STEPS-MISC.md` - misc steps.
-- `RECIPE-STEPS-TEMPLATES-WORKFLOWS.md` - templates and workflows.
-- `RECIPE-CONTENT.md` - content import patterns.
-- `RECIPE-COMMANDS.md` - command step examples.
+Files:
+- `RECIPE-STEPS.md` - step groups and common first steps.
+- `RECIPE-STEPS-CORE.md` - `feature`, `themes`, `settings`, and `recipes` steps.
+- `RECIPE-STEPS-DEFINITIONS.md` - `ContentDefinition`, `ReplaceContentDefinition`, `DeleteContentDefinition`.
+- `RECIPE-STEPS-CONTENT-MEDIA.md` - `content`, `media`, and `MediaProfiles` steps.
+- `RECIPE-STEPS-SEARCH.md` - `Queries`, Lucene (index/reset/rebuild), Elastic (index/reset/rebuild), Azure AI Search, index profile steps.
+- `RECIPE-STEPS-SECURITY.md` - `Roles`, `Users`, custom user settings, OpenID/external auth, social providers.
+- `RECIPE-STEPS-MISC.md` - `Layers`, `Placements`, `AdminMenu`, `Sitemaps`, `UrlRewriting`, `custom-settings`, tenants.
+- `RECIPE-STEPS-TEMPLATES-WORKFLOWS.md` - `Templates`, `AdminTemplates`, `ShortcodeTemplates`, `WorkflowType`.
+- `RECIPE-CONTENT.md` - content import structure, fields/parts, references, definitions vs items, Flow/Bag examples.
+- `RECIPE-COMMANDS.md` - command step shape, known commands, discovery, and when to use vs `Users`.
 - `RECIPE-EXAMPLES.md` - ready-to-copy examples.
-- `RECIPE-EXAMPLES-SETUP.md` - setup recipe examples.
-- `RECIPE-EXAMPLES-CONTENT.md` - content recipe examples.
-- `FEATURE-CATALOG.md` - feature IDs (full list: `FEATURE-CATALOG-ALL.md`).
-- `BASE-RECIPES.md` - base setup recipes.
+- `RECIPE-EXAMPLES-SETUP.md` - minimal setup recipe and a page example with Summary/Autoroute settings.
+- `RECIPE-EXAMPLES-CONTENT.md` - content package example with FlowPart and BagPart.
+- `FEATURE-CATALOG.md` - common feature IDs (full list in `FEATURE-CATALOG-ALL.md`).
+- `FEATURE-CATALOG-ALL.md` - full feature ID list.
+- `BASE-RECIPES.md` - base setup recipes (Blank, Headless) and when to reuse.
 
 ## Where recipes live
 - `*/Recipes/*.recipe.json`: reusable recipes in modules/themes.
@@ -48,16 +46,11 @@ Related files:
 ```
 
 ## Recipe helpers (inline values)
-- `js`: execute JavaScript expressions.
-  - `"[js:uuid()]"`, `"[js:variables('homeId')]"`.
-- `file`: load file contents.
-  - `"[file:text('Snippets/page.liquid')]"`
-- `env`: read environment variables.
-  - `"[env:MY_VAR]"`
-- `appsettings`: read configuration values.
-  - `"[appsettings:OrchardCore:SiteName]"`
-- `localization`: read localized strings.
-  - `"[localization:WelcomeTitle]"`
+- `js`: execute JavaScript expressions (for example, `"[js:uuid()]"`).
+- `file`: load file contents (for example, `"[file:text('Snippets/page.liquid')]"`).
+- `env`: read environment variables (for example, `"[env:MY_VAR]"`).
+- `appsettings`: read configuration values (for example, `"[appsettings:OrchardCore:SiteName]"`).
+- `localization`: read localized strings (for example, `"[localization:WelcomeTitle]"`).
 - `base64`, `html`, `gzip`: decode content.
 
 ## Execution and composition

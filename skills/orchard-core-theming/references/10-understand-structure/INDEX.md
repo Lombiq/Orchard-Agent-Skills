@@ -1,9 +1,9 @@
 # Theme Basics
 
-Purpose: Use to identify the active/base theme, confirm manifests, and locate layouts/zones.
-- `SOLUTION-STRUCTURE.md` - locate solution layout and data.
-- `THEME-STRUCTURE.md` - inheritance, manifests, Razor vs Liquid.
-- `LAYOUTS-ZONES.md` - global and local zones.
-- `CREATE-THEME.md` - theme creation checklist.
+Purpose: Identify the active/base theme, confirm manifests, and locate layouts/zones.
 
-Keep this section small and link to specifics.
+Files:
+- `SOLUTION-STRUCTURE.md` - repo layout, host web project, App_Data/tenants, AutoSetup, recipes, and content definitions.
+- `THEME-STRUCTURE.md` - views and rendering, Razor vs Liquid, `_ViewImports`, manifests, base theme inheritance.
+- `LAYOUTS-ZONES.md` - layout template global zones, where to confirm zones in source, content item shape local zones.
+- `CREATE-THEME.md` - dotnet template flow, fallback scaffolding, minimal files checklist, scaffold examples, and post-setup steps.
