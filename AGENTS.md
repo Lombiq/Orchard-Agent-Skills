@@ -19,3 +19,7 @@ This repository contains agent-agnostic skills under `skills/`. Follow these rul
 - Update `references/TASK-MAP.md` when adding new workflows.
 - Preserve existing content unless the change is deliberate and documented.
 - Follow the [orchard-core-theming maintenance guide](maintenance/orchard-core-theming.md) for step-by-step update workflows when the user requests them.
+
+## Orchard Core theming sync
+- Use `skills/orchard-core-theming/scripts/sync-skill.py` to refresh the skill from the repo source of truth.
+- Avoid hand-editing generated reference files; update the upstream source and re-sync instead.

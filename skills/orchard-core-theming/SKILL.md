@@ -25,6 +25,12 @@ Use this skill for Orchard Core theming and content-definition/recipe work.
 Use these scripts instead of hand-building extracts.
 - `scripts/extract-content-definitions.py` to extract content types/parts/fields from `ContentDefinition.json` or `OrchardCore.db`, with optional related-type expansion and Markdown/JSON output. See `references/50-content-model/CONTENT-DEFINITIONS-EXTRACTOR.md`.
 - `scripts/extract-content-items.py` to get content items from `OrchardCore.db`, filter by type/IDs/text, and optionally emit a recipe `content` step or a Markdown/JSON extract. See `references/50-content-model/CONTENT-ITEMS-EXTRACTOR.md`.
+- `scripts/sync-skill.py` to refresh the entire skill folder from the Lombiq/Orchard-Agent-Skills repo (references, scripts, SKILL.md, assets). The running script is not overwritten until the next sync.
+
+Sync example:
+```bash
+python skills/orchard-core-theming/scripts/sync-skill.py
+```
 
 ## Reference section cues
 Use these cues to decide which reference section to open.
