@@ -29,6 +29,16 @@ Example skeleton:
 - `wrappers`: list of wrapper shapes.
 - `shape`: replace shape type.
 
+## Removing shapes from zones (Liquid)
+When you render a local zone like `Model.Content`, you can remove a specific shape before rendering:
+```liquid
+{% shape_remove_item Model.Content "Blog-Summary" %}
+{% shape_remove_item Model.Content "HtmlBodyPart" %}
+```
+Use the shape differentiator as listed on the shape (e.g., `Blog-Summary` for a field on the `Blog` part). This is the default way to suppress a shape from a zone in Liquid.
+
+Placement rules (`place: "-"`) are still valid when you want to hide shapes globally or by `contentType`/`displayType`.
+
 ## Placement precedence
 1) Startup project (acts like a super-theme)
 2) Active theme (front-end or admin depending on request)

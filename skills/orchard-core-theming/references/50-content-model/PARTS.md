@@ -126,6 +126,7 @@ add fields to `ContentItem.Content`.
 
 ### TaxonomyPart
 - Properties: `TermContentType`, `Terms` (JSON array of embedded terms)
+- Routing tip: add `AutoroutePart` to the taxonomy content item (`RouteContainedItems: true`) and to the term content type (e.g., Tag) so each term gets its own URL (use `AutoroutePart.Path` on terms like `strategy`).
 
 ### TermPart
 - Properties: `TaxonomyContentItemId`

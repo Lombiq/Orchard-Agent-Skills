@@ -13,6 +13,25 @@ All field settings derive from `FieldSettings`:
 - `Hint`
 - `Required`
 
+## Editor placement
+Field editor selection (e.g., `Wysiwyg`, `PredefinedList`, `TextArea`) is stored on
+`ContentPartFieldSettings.Editor`, not in the field-type settings object.
+Field-type settings like `MarkdownFieldSettings`, `TextFieldSettings`, or
+`HtmlFieldSettings` should not contain the editor value.
+Example:
+```json
+{
+  "ContentPartFieldSettings": {
+    "DisplayName": "Body",
+    "Position": "2",
+    "Editor": "Wysiwyg"
+  },
+  "MarkdownFieldSettings": {
+    "SanitizeHtml": true
+  }
+}
+```
+
 ## Field types (built-in)
 
 ### BooleanField

@@ -42,6 +42,12 @@ Display mode variants (for parts with display modes):
 - `[ContentType]_[DisplayType]__[PartType]__[DisplayMode]_Display`
 - `[ContentType]_[DisplayType]__[PartName]__[DisplayMode]_Display`
 
+## Taxonomy term alternates
+- Term landing pages render the `TermPart` shape for the term content type.
+- Alternate name: `<TermContentType>__TermPart` (file example: `Tag-TermPart.liquid` or `Tag__TermPart.liquid`).
+- Use `Model.ContentItems` for the related content list and `Model.Pager` for paging (use `shape_pager` and `shape_render`).
+- For the term header/body, override the term content item with `Content__<TermContentType>` (e.g., `Content__Tag.liquid`).
+
 ## Field alternates if granular overrides are required
 - `[ShapeType]` (often the field type name)
 - `[ShapeType]_[DisplayType]` (field type with display type)

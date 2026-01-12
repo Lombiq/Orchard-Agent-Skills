@@ -52,6 +52,7 @@ Files:
 - `appsettings`: read configuration values (for example, `"[appsettings:OrchardCore:SiteName]"`).
 - `localization`: read localized strings (for example, `"[localization:WelcomeTitle]"`).
 - `base64`, `html`, `gzip`: decode content.
+- Content item IDs use 26-character lowercase alphanumeric strings; use `[js:uuid()]` to generate them or hardcode a stable ID when you need consistency across environments.
 
 ## Execution and composition
 - Use the `recipes` step to include other recipes by `name`.

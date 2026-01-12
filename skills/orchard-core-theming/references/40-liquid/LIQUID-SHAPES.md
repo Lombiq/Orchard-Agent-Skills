@@ -17,6 +17,12 @@
 {{ Content.ContentItemId["<id>"] | shape_build_display: "Summary" | shape_render }}
 ```
 
+## Render content items by handle/alias
+```liquid
+{% assign menu = Content["alias:main-menu"] %}
+{{ menu | shape_build_display: "Summary" | shape_render }}
+```
+
 ## Zone content
 - `{% zone "Header", position: "1" %}...{% endzone %}` pushes content into a zone/section.
 - Use `render_section` in the layout to output the zone.

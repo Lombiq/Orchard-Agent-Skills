@@ -9,7 +9,9 @@
 ## Orchard-specific tips
 - Use `href`/`img_tag`/`asset_url` filters to resolve paths.
 - Build and render shapes: `shape_build_display`, `shape_build_editor`, `shape_render`.
-- Access content items in scope: `Model.ContentItem`, `Content.ContentItemId["id"]`, or values passed in the shape's model.
+- Access content items in scope: `Model.ContentItem`, `Content.ContentItemId["id"]`, `Content["alias:my-handle"]`, or values passed in the shape's model.
+- Inline menu rendering: load a menu by alias (`{% assign menu = Content["alias:main-menu"] %}`) and iterate `menu.MenuItemsListPart.MenuItems`.
+- For BagPart `ContentItems`, access parts directly (`item.PartName.Field`) instead of `item.Content.PartName`.
 - Localization: `| t` filter.
 
 ## Safety and debugging

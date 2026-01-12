@@ -38,6 +38,7 @@ Each item is a full `ContentItem` record, including parts and fields.
 ```
 Notes:
 - Some recipes use `Data` instead of `data`. Prefer lowercase `data` for consistency.
+- Content item IDs are 26-character lowercase alphanumeric strings (e.g., `4r6yjrwsyev0m2bcqvex7d5fxy`). Use `[js:uuid()]` to generate them at import time, or hardcode a value when you need stable IDs across environments.
 - The properties under each part match the part/field models in the content model docs.
 
 ## Fields and parts

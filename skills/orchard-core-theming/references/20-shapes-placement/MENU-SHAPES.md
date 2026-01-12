@@ -34,6 +34,14 @@ How Orchard Core renders menus and how to override or hand-render them.
 {% assign menu = "alias:main-menu" | menu %}
 {{ menu | shape_render }}
 ```
+- Liquid (content item access for in-place rendering):
+```liquid
+{% assign menu_item = Content["alias:main-menu"] %}
+{% assign menu_items = menu_item.Content.MenuItemsListPart.MenuItems %}
+{% for item in menu_items %}
+  {{ item.DisplayText }}
+{% endfor %}
+```
 - Razor: inject `IShapeFactory` or use `New` to build:
 ```cshtml
 @inject OrchardCore.DisplayManagement.IShapeFactory ShapeFactory
@@ -113,6 +121,7 @@ How Orchard Core renders menus and how to override or hand-render them.
   - `MenuItemsListPart`: `MenuItems` (children)
   - `MenuItemPermissionPart`: permission data (hide if unauthorized)
 - For display, the `MenuItem` shape includes the content item and computed alternates; `MenuItemLink` focuses on the link rendering.
+- Use `ContentItem.DisplayText` for link labels; avoid `TitlePart.Title` in front-end rendering since it's admin UX metadata and not reliable for content handling.
 
 ## Tips
 - Start with the tag helper for default behavior; override `MenuItem` / `MenuItemLink` for custom markup.

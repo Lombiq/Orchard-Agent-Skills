@@ -11,6 +11,7 @@ How Orchard Core stores and renders contained items.
   {{ item | shape_build_display: "Detail" | shape_render }}
 {% endfor %}
 ```
+- When you need direct field access on contained items in Liquid, use `item.PartName.Field` (no `.Content` prefix).
 - Render (Razor):
 ```csharp
 @using OrchardCore.ContentManagement.Display

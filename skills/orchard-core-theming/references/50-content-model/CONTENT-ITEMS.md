@@ -12,6 +12,7 @@
 - `Owner`, `Author`
 - `DisplayText`
 - `Id` (database document id), `Number` (version number) may be present in some contexts.
+- Use `DisplayText` for rendering; `TitlePart.Title` is for editor UX/back-compat and should not be used as a rendering fallback.
 
 ## Content JSON access
 - `ContentItem.Content` is a dynamic JSON object.
