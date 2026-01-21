@@ -4,7 +4,7 @@ This repository contains agent-agnostic skills under `skills/`. Follow these rul
 
 ## Skill structure
 - Place each skill in its own folder under `skills/<skill-name>/`.
-- `SKILL.md` must include YAML frontmatter with only `name` and `description`.
+- `SKILL.md` must include YAML frontmatter with `name` and `description` (optional extra keys are allowed).
 - Use `references/` for supporting docs, and prefer task-focused leaf files.
 - References to files should be relative to the skill root.
 - Avoid long reference chains; make `references/TASK-MAP.md` point directly to leaf files.

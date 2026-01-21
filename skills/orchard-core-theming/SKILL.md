@@ -1,6 +1,10 @@
 ---
 name: orchard-core-theming
 description: Evidence-first Orchard Core theming skill for shapes, alternates, placement, Razor/Liquid templates, content model access, assets/resources, and recipes. Use for theme adjustments, shape overrides, template discovery, content item/field access, placement.json rules, and recipe authoring in Orchard Core projects.
+license: MIT
+metadata:
+  author: Lombiq Technologies
+  version: "1.0"
 ---
 
 # Orchard Core Theming
@@ -25,6 +29,7 @@ Use this skill for Orchard Core theming and content-definition/recipe work.
 Use these scripts instead of hand-building extracts.
 - `scripts/extract-content-definitions.py` to extract content types/parts/fields from `ContentDefinition.json` or `OrchardCore.db`, with optional related-type expansion and Markdown/JSON output. See `references/50-content-model/CONTENT-DEFINITIONS-EXTRACTOR.md`.
 - `scripts/extract-content-items.py` to get content items from `OrchardCore.db`, filter by type/IDs/text, and optionally emit a recipe `content` step or a Markdown/JSON extract. See `references/50-content-model/CONTENT-ITEMS-EXTRACTOR.md`.
+- `scripts/generate-orchard-ids.py` to generate Orchard Core IDs that match the `DefaultIdGenerator` alphabet for stable `ContentItemId` values in recipes. See `references/70-recipes/ID-GENERATION.md`.
 - `scripts/sync-skill.py` to refresh the entire skill folder from the Lombiq/Orchard-Agent-Skills repo (references, scripts, SKILL.md, assets). The running script is not overwritten until the next sync.
 
 Sync example:
@@ -51,7 +56,9 @@ Use this list to decide whether to open `references/TASK-MAP.md` for the exact l
 - Extract a focused content definition slice (large JSON).
 - Create a setup recipe.
 - Add content types and sample content to a recipe.
+- Create or update workflows in a recipe.
 - Create or override a content item shape template.
+- Implement or override OrchardCore.Forms widgets and Form content.
 - Inspect real content items (SQLite).
 - Update a shape after adding fields.
 - Render BagPart/FlowPart/ListPart items.

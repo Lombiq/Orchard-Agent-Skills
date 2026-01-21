@@ -27,3 +27,27 @@ Steps that import content items and media assets.
 ```json
 { "name": "MediaProfiles", "MediaProfiles": { "MyProfile": { ... } } }
 ```
+- Fields:
+  - `Hint` (string)
+  - `Width` (int), `Height` (int)
+  - `Mode` (enum): `Undefined`, `Max`, `Crop`, `Pad`, `BoxPad`, `Min`, `Stretch`
+  - `Format` (enum): `Undefined`, `Bmp`, `Gif`, `Jpg`, `Png`, `Tga`, `WebP`
+  - `Quality` (int 0-100)
+  - `BackgroundColor` (string, e.g. `#000000`)
+- Example:
+```json
+{
+  "name": "MediaProfiles",
+  "MediaProfiles": {
+    "site-default": {
+      "Hint": "Max width 1920px, optimized for desktop images.",
+      "Width": 1920,
+      "Height": 0,
+      "Mode": "Max",
+      "Format": "WebP",
+      "Quality": 82,
+      "BackgroundColor": ""
+    }
+  }
+}
+```

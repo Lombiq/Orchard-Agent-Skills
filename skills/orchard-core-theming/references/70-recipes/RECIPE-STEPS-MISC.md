@@ -18,6 +18,8 @@ Other steps that do not fit the main categories.
 
 ## `AdminMenu`
 - Creates/updates admin menu structure.
+- Use `PlaceholderAdminNode` for parents with children.
+- Reference: `ADMIN-MENU.md`.
 
 ## `Sitemaps`
 - Creates/updates sitemaps.

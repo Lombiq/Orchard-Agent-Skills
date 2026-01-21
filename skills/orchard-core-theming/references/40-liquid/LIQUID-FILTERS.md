@@ -45,7 +45,8 @@ This is a source-derived catalog of Liquid filters commonly used for Orchard Cor
 
 **Media**
 - `asset_url`: resolve a media path to a public URL. Example: `{{ "/media/hero.jpg" | asset_url }}`
-- `resize_url`: build a resized image URL. Example: `{{ "/media/hero.jpg" | resize_url: width: 800, mode: "crop" }}`
+- `resize_url`: build a resized image URL. Example: `{{ "/media/hero.jpg" | resize_url: width: 800, mode: "crop" }}`.
+  Use a media profile with named args: `{{ "/media/hero.jpg" | resize_url: profile: "site-default" }}`
 
 **Localization**
 - `localization_set`: get localized item(s) for a set; optional culture arg. Example: `{{ Model.LocalizationSet | localization_set: "fr-FR" }}`

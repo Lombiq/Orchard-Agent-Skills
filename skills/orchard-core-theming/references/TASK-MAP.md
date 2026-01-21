@@ -28,11 +28,18 @@ Start here. Pick the task and open only the referenced files.
 
 ## Add content types and sample content to a recipe
 - Read: `70-recipes/RECIPE-CONTENT.md`
+- Read: `70-recipes/ID-GENERATION.md`
 - Read: `70-recipes/RECIPE-EXAMPLES-CONTENT.md`
 - Read: `70-recipes/RECIPE-STEPS-DEFINITIONS.md`
 - Read: `70-recipes/RECIPE-STEPS-CONTENT-MEDIA.md`
 - Read: `50-content-model/CONTENT-DEFINITIONS.md`
 - Read: `50-content-model/CONTENT-DEFINITIONS-EXAMPLES.md` (sample patterns)
+
+## Create or update workflows in a recipe
+- Read: `70-recipes/RECIPE-STEPS-TEMPLATES-WORKFLOWS.md`
+- Read: `70-recipes/WORKFLOWS.md`
+- Read: `70-recipes/RECIPE-EXAMPLES-WORKFLOWS.md`
+- Read: `70-recipes/ID-GENERATION.md`
 
 ## Create or override a content item shape template
 - Read: `20-shapes-placement/SHAPE-WORKFLOW.md`
@@ -40,6 +47,12 @@ Start here. Pick the task and open only the referenced files.
 - Read: `50-content-model/FIELDS.md`
 - Read: `50-content-model/CONTAINERS.md`
 - Then choose Razor or Liquid: `30-razor/INDEX.md` or `40-liquid/INDEX.md`.
+
+## Implement or override OrchardCore.Forms widgets and Form content
+- Read: `20-shapes-placement/FORMS-WIDGETS.md`
+- Read: `50-content-model/CONTAINERS.md`
+- Read: `70-recipes/RECIPE-CONTENT.md`
+- Read: `70-recipes/RECIPE-STEPS-CORE.md`
 
 ## Inspect real content items (SQLite)
 - Read: `50-content-model/CONTENT-ITEMS-EXTRACTOR.md`

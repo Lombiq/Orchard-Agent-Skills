@@ -34,6 +34,13 @@ How Orchard Core stores and renders contained items.
   - To change layout rules globally, override the `FlowPart` shape.
  - Typical usage: FlowPart is meant for Widget stereotypes. It is usually rendered as part of
    `@await DisplayAsync(Model.Content)`; manual rendering is rare compared to BagPart.
+ - FlowPart adds widget classes. These are the exact class patterns:
+   - `widget`
+   - `widget-<contenttype>` (content type HTML-classified, ex: `widget-input`)
+   - `widget-align-left`, `widget-align-center`, `widget-align-right`, `widget-align-justify`, `widget-align-inherit`
+   - `widget-size-25`, `widget-size-33`, `widget-size-50`, `widget-size-66`, `widget-size-75`, `widget-size-100`
+   - Sizes are integers and can be any value, but FlowPart UI usually sets the above defaults.
+   - If you override widget templates, render `Model.Classes` on the wrapper or you lose sizing/alignment metadata.
 
 ## ListPart and ContainedPart
 - ListPart stores no items; items live as regular content items with `ContainedPart`.

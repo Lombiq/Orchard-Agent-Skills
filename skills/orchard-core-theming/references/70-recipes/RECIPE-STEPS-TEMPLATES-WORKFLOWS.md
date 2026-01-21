@@ -17,3 +17,4 @@ Steps that define Liquid templates and workflows.
 
 ## `WorkflowType`
 - Creates/updates workflow definitions.
+- Use `WORKFLOWS.md` for activity catalogs, expression syntax, and feature requirements.
