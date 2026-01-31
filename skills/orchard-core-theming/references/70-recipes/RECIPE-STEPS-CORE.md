@@ -1,6 +1,6 @@
-# Recipe Steps - Core Setup
+# Recipe Steps - Core
 
-Core steps used in most setup recipes.
+Core steps used in most recipes.
 
 ## `feature`
 - Enables/disables features.

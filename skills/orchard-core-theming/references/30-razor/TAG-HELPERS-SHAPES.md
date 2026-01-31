@@ -5,7 +5,9 @@ Tag helpers used to render and customize shapes.
 ## `<shape>`
 - Purpose: Render any shape by type name with optional props and caching metadata.
 - Attributes:
-  - `type` (optional): shape type. If omitted, uses tag name.
+  - `type` (optional): shape type. If omitted, uses tag name. Use the internal shape type, not the file name.
+    File name mapping: `-` -> `__`, `.` -> `_`. E.g. `Component-Header.cshtml` renders with
+    `type="Component__Header"` and `Content-Page.Summary.cshtml` renders with `type="Content_Summary__Page"`.
   - `prop-*`: passes additional shape properties; values keep original type.
   - Any other attributes become shape properties (string).
   - `id`, `alternate`, `wrapper`, `display-type` map to shape metadata.

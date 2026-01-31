@@ -12,7 +12,9 @@ Liquid tag arguments are typically snake_case (e.g., `append_version`, `cache_id
 - `{% antiforgerytoken %}`: render a hidden anti-forgery input.
 
 **Shapes (rendering)**
-- `{% shape type: "Card", title: "Hi" %}`: render a shape; extra args become properties.
+- `{% shape type: "Card", title: "Hi" %}`: render a shape; extra args become properties. Use the internal shape type,
+  not the file name. File name mapping: `-` -> `__`, `.` -> `_`. E.g. `Component-Header.cshtml` renders as
+  `Component__Header` and `Content-Page.Summary.cshtml` renders as `Content_Summary__Page`.
 - `{% contentitem content_item: Model.ContentItem %}`: render a content item shape.
 - `{% zone "Header", position: "1" %}...{% endzone %}`: add content to a zone.
 

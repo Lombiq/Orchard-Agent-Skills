@@ -5,9 +5,14 @@ They let you target a specific content type, display type, part, field, or zone 
 
 ## Naming rules (high level)
 - `__` separates alternate segments; filenames use `-` in place of `__` (both work, but `-` is standard).
+- A single `_` in shape type maps to `.` in file names.
 - Display types are inserted with `_DisplayType` between the base shape and the alternate segments.
 - Display modes append `_Display` to the shape type for parts/fields that support display modes.
 - Part and field "differentiators" use `-` inside the alternate segment (e.g., `Blog-MyField`).
+-
+  Shape type ↔ file name examples:
+  - `Component__Header` -> `Component-Header.cshtml`
+  - `Content_Summary__Page` -> `Content-Page.Summary.cshtml`
 
 ## Content item alternates
 - `Content__[ContentType]` - content item shape for a specific content type.
