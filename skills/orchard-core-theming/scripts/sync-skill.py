@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Sync this skill from the Orchard-Agent-Skills repo."""
+"""Sync this skill from the Orchard-Core-Agent-Skills repo."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-DEFAULT_REPO_URL = "https://github.com/Lombiq/Orchard-Agent-Skills"
+DEFAULT_REPO_URL = "https://github.com/Lombiq/Orchard-Core-Agent-Skills"
 DEFAULT_REF = "main"
 DEFAULT_SKILL_PATH = "skills/orchard-core-theming"
 
@@ -96,7 +96,7 @@ def main() -> None:
     parser.add_argument(
         "--local-repo",
         default=None,
-        help="Use an existing local Orchard-Agent-Skills clone (no checkout).",
+        help="Use an existing local Orchard-Core-Agent-Skills clone (no checkout).",
     )
     parser.add_argument("--skill-path", default=DEFAULT_SKILL_PATH)
     args = parser.parse_args()

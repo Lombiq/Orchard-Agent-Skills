@@ -16,7 +16,7 @@ Highlights:
 - Reads content definitions via `ContentDefinition.json` (when `OrchardCore.Contents.FileContentDefinition` is enabled) or directly from the SQLite database, and can also pull the latest content items for inspection.
 - Accesses all relevant content models for content items and fields, including parts like `BagPart` and `FlowPart` when the task requires them (e.g., implementing a content item display shape).
 - Can manage recipes using common recipe steps for sample content items, content definitions, site settings, roles, and users (using commands).
-- Includes a self-sync script to refresh the skill from the Lombiq/Orchard-Agent-Skills repo.
+- Includes a self-sync script to refresh the skill from the Lombiq/Orchard-Core-Agent-Skills repo.
 
 ## Installing skills
 
@@ -59,7 +59,7 @@ python skills/orchard-core-theming/scripts/sync-skill.py
 To use an existing local clone as the source:
 
 ```text
-python skills/orchard-core-theming/scripts/sync-skill.py --local-repo D:\Repos\Lombiq\Orchard-Agent-Skills
+python skills/orchard-core-theming/scripts/sync-skill.py --local-repo D:\Repos\Lombiq\Orchard-Core-Agent-Skills
 ```
 
 ## Contributing

@@ -17,7 +17,7 @@ Note: these steps are not yet final or battle-tested. When you run the first upd
    - Keep the clone clean and use a detached HEAD or a worktree so local changes do not leak into scans.
    - Example (PowerShell):
      ```powershell
-     cd D:\Repos\Lombiq\Orchard-Agent-Skills\temp
+     cd D:\Repos\Lombiq\Orchard-Core-Agent-Skills\temp
      git clone https://github.com/OrchardCMS/OrchardCore.git OrchardCore
      cd OrchardCore
      git fetch --tags
@@ -27,7 +27,7 @@ Note: these steps are not yet final or battle-tested. When you run the first upd
 3. Scan for changes that affect theming and recipes.
    - Compare the baseline tag to the new tag:
      ```powershell
-     cd D:\Repos\Lombiq\Orchard-Agent-Skills\temp\OrchardCore
+     cd D:\Repos\Lombiq\Orchard-Core-Agent-Skills\temp\OrchardCore
      git diff <old-tag>..<new-tag> -- src/OrchardCore.*
      ```
    - Use this diff to target which reference files need updates first.
@@ -35,30 +35,30 @@ Note: these steps are not yet final or battle-tested. When you run the first upd
 4. Update Razor references (`skills/orchard-core-theming/references/30-razor/`).
    - Tag helpers: scan for new or changed tag helpers in source and update `TAG-HELPERS-*.md`.
      ```powershell
-     rg "TagHelper" D:\Repos\Lombiq\Orchard-Agent-Skills\temp\OrchardCore\src -g "*.cs"
+     rg "TagHelper" D:\Repos\Lombiq\Orchard-Core-Agent-Skills\temp\OrchardCore\src -g "*.cs"
      ```
    - Tag helper names and attributes are usually on classes with `HtmlTargetElement` and public properties. Add/remove entries to match the current source.
    - IOrchardHelper: scan for extension methods and update `ORCHARD-HELPER.md`.
      ```powershell
-     rg "IOrchardHelper" D:\Repos\Lombiq\Orchard-Agent-Skills\temp\OrchardCore\src -g "*.cs"
+     rg "IOrchardHelper" D:\Repos\Lombiq\Orchard-Core-Agent-Skills\temp\OrchardCore\src -g "*.cs"
      ```
 
 5. Update Liquid references (`skills/orchard-core-theming/references/40-liquid/`).
    - Liquid tags: scan for `ILiquidTag` implementations and update `LIQUID-TAGS.md`.
      ```powershell
-     rg "ILiquidTag" D:\Repos\Lombiq\Orchard-Agent-Skills\temp\OrchardCore\src -g "*.cs"
+     rg "ILiquidTag" D:\Repos\Lombiq\Orchard-Core-Agent-Skills\temp\OrchardCore\src -g "*.cs"
      ```
    - Liquid filters: scan for `ILiquidFilter` implementations and update `LIQUID-FILTERS.md`.
      ```powershell
-     rg "ILiquidFilter" D:\Repos\Lombiq\Orchard-Agent-Skills\temp\OrchardCore\src -g "*.cs"
+     rg "ILiquidFilter" D:\Repos\Lombiq\Orchard-Core-Agent-Skills\temp\OrchardCore\src -g "*.cs"
      ```
    - If the Liquid base syntax changes, update `LIQUID.md` accordingly.
 
 6. Update shapes and placement (`skills/orchard-core-theming/references/20-shapes-placement/`).
    - Scan for shape drivers and shape attributes to spot new shape types or renamed alternates.
      ```powershell
-     rg "ShapeAttribute" D:\Repos\Lombiq\Orchard-Agent-Skills\temp\OrchardCore\src -g "*.cs"
-     rg "DisplayDriver" D:\Repos\Lombiq\Orchard-Agent-Skills\temp\OrchardCore\src -g "*.cs"
+     rg "ShapeAttribute" D:\Repos\Lombiq\Orchard-Core-Agent-Skills\temp\OrchardCore\src -g "*.cs"
+     rg "DisplayDriver" D:\Repos\Lombiq\Orchard-Core-Agent-Skills\temp\OrchardCore\src -g "*.cs"
      ```
    - Review module views and templates in `src/OrchardCore.*` for shape type changes and update `SHAPES.md`, `ALTERNATES.md`, `PLACEMENT.md`, and `SHAPE-WORKFLOW.md`.
    - Menu and pager shapes: check `OrchardCore.Menu` and `OrchardCore.Navigation` modules for shape types and update `MENU-SHAPES.md` and `PAGER-SHAPES.md`.
@@ -66,34 +66,34 @@ Note: these steps are not yet final or battle-tested. When you run the first upd
 7. Update content model references (`skills/orchard-core-theming/references/50-content-model/`).
    - Content parts: scan for classes deriving from `ContentPart` and update `PARTS.md`.
      ```powershell
-     rg "class .*Part\\s*:\\s*ContentPart" D:\Repos\Lombiq\Orchard-Agent-Skills\temp\OrchardCore\src -g "*.cs"
+     rg "class .*Part\\s*:\\s*ContentPart" D:\Repos\Lombiq\Orchard-Core-Agent-Skills\temp\OrchardCore\src -g "*.cs"
      ```
    - Content fields: scan for classes deriving from `ContentField` and update `FIELDS.md`.
      ```powershell
-     rg "class .*Field\\s*:\\s*ContentField" D:\Repos\Lombiq\Orchard-Agent-Skills\temp\OrchardCore\src -g "*.cs"
+     rg "class .*Field\\s*:\\s*ContentField" D:\Repos\Lombiq\Orchard-Core-Agent-Skills\temp\OrchardCore\src -g "*.cs"
      ```
    - Settings objects: scan for `*Settings` types used by parts/fields and update `SETTINGS.md`.
      ```powershell
-     rg "class .*Settings" D:\Repos\Lombiq\Orchard-Agent-Skills\temp\OrchardCore\src -g "*.cs"
+     rg "class .*Settings" D:\Repos\Lombiq\Orchard-Core-Agent-Skills\temp\OrchardCore\src -g "*.cs"
      ```
    - Containers: verify Flow/Bag/List parts in source and update `CONTAINERS.md` if behaviors or properties changed.
 
 8. Update assets and resources (`skills/orchard-core-theming/references/60-assets-resources/`).
    - Scan for `ResourceManifest` usage to validate built-in resources and update `RESOURCES.md`.
      ```powershell
-     rg "ResourceManifest" D:\Repos\Lombiq\Orchard-Agent-Skills\temp\OrchardCore\src -g "*.cs"
+     rg "ResourceManifest" D:\Repos\Lombiq\Orchard-Core-Agent-Skills\temp\OrchardCore\src -g "*.cs"
      ```
 
 9. Update recipes (`skills/orchard-core-theming/references/70-recipes/`).
    - Recipe steps: scan for step handlers and update `RECIPE-STEPS*.md`.
      ```powershell
-     rg "RecipeStep" D:\Repos\Lombiq\Orchard-Agent-Skills\temp\OrchardCore\src -g "*.cs"
-     rg "IRecipeStepHandler" D:\Repos\Lombiq\Orchard-Agent-Skills\temp\OrchardCore\src -g "*.cs"
+     rg "RecipeStep" D:\Repos\Lombiq\Orchard-Core-Agent-Skills\temp\OrchardCore\src -g "*.cs"
+     rg "IRecipeStepHandler" D:\Repos\Lombiq\Orchard-Core-Agent-Skills\temp\OrchardCore\src -g "*.cs"
      ```
    - Base recipes: review `src/OrchardCore.Themes/TheAdmin/Recipes/*.recipe.json` and update `BASE-RECIPES.md`.
    - Feature catalog: re-scan `Manifest.cs` files for features and update `FEATURE-CATALOG.md` and `FEATURE-CATALOG-ALL.md`.
      ```powershell
-     rg "Feature\\(" D:\Repos\Lombiq\Orchard-Agent-Skills\temp\OrchardCore\src -g "Manifest.cs"
+     rg "Feature\\(" D:\Repos\Lombiq\Orchard-Core-Agent-Skills\temp\OrchardCore\src -g "Manifest.cs"
      ```
    - Re-validate recipe examples and step names in `RECIPE-EXAMPLES-*.md` and `RECIPE-CONTENT.md`.
 
@@ -114,7 +114,7 @@ Note: these steps are not yet final or battle-tested. When you run the first upd
     - Keep files ASCII-only unless the file already uses Unicode and it is required.
 
 14. Clean up the temp clone.
-    - If you do not need the temp clone anymore, remove `D:\Repos\Lombiq\Orchard-Agent-Skills\temp\OrchardCore` to free space.
+    - If you do not need the temp clone anymore, remove `D:\Repos\Lombiq\Orchard-Core-Agent-Skills\temp\OrchardCore` to free space.
     - If you plan to reuse it, leave it in place for the next update.
 
 ## Notes
