@@ -4,7 +4,7 @@ import json
 import os
 import sqlite3
 import sys
-from collections import deque
+from collections import deque # codespell:ignore
 
 TYPE_REFERENCE_KEYS = {
     "AllowedContentTypes",
@@ -210,7 +210,7 @@ def _collect_type_references(type_record, parts_by_name):
 
 def _expand_related(type_names, types_by_name, types_by_stereotype, parts_by_name, depth):
     related = {name: "selected" for name in type_names}
-    queue = deque((name, 0) for name in type_names)
+    queue = deque((name, 0) for name in type_names) # codespell:ignore
 
     while queue:
         name, level = queue.popleft()
