@@ -14,9 +14,8 @@ Template output (key files):
 - `MyTheme.csproj` (SDK-style, references OrchardCore theme targets)
 - `Manifest.cs` (theme metadata)
 - `Startup.cs` (optional; add services/resources if needed)
-- `ResourceManifest.cs` (optional; register scripts/styles)
-- `Views/Layout.cshtml` or `Layout.liquid`
-- `Views/_ViewImports.cshtml` (for Razor themes)
+- `Views/Layout.cshtml` or `Layout.liquid` (fall back to Liquid if not specified by the user)
+- `Views/_ViewImports.cshtml` (for if Razor is used)
 - `wwwroot/` for static assets
 
 ## If templates are unavailable
@@ -59,7 +58,6 @@ Template output (key files):
 - `Views/_ViewImports.cshtml` (Razor): include Orchard tag helpers.
 - `Views` overrides: shapes you need to customize.
 - `wwwroot/` assets: styles/scripts/images.
-- `ResourceManifest.cs`: define resource names and dependencies.
 - `Startup.cs` (optional): register services, adjust options if needed.
 
 ## Scaffold examples
