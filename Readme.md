@@ -4,6 +4,8 @@
 
 This repository contains [agent skills](https://agentskills.io/home) for [Orchard Core](https://orchardproject.net) development tasks. Orchard Core is an open-source, modular, and multi-tenant application framework and CMS built on .NET and ASP.NET Core. With these skills, you can use your favorite agent efficiently for common Orchard Core tasks.
 
+Do you want something similar for Tailwind? Check out [Lombiq Tailwind Agent Skills](https://github.com/Lombiq/Tailwind-Agent-Skills)!
+
 ## Requirements
 
 - Any agent that supports agent skills.
