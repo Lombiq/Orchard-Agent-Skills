@@ -69,7 +69,7 @@ For refresh commands, see [Refreshing installed skills](#refreshing-installed-sk
 The quickest way to install from this repository is to use the `skills` CLI, which detects and installs skills automatically.
 
 ```bash
-npx skills add Lombiq/Orchard-Agent-Skills
+npx skills add Lombiq/Orchard-Core-Agent-Skills
 ```
 
 If you prefer manual installation, copy the `skills/` subfolders into your agent's skills directory:
